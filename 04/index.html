@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		@font-face {
+		  font-family: 'cwTeXYen';
+		  font-style: normal;
+		  font-weight: 500;
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+		}
+	</style>
+</head>
+<body class="shower full">
+	<header class="caption">
+		<h1 style="text-align: center; color: #FFF;">HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h1>
+		<p style="color: #FFF; text-align: center;">蔡智晴</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h2>
+		<p class="sub">JavaScript</p>
+		<p class="me">講師：蔡智晴 / Candy Tsai</p>
+		<p class="me-sub">課程網站：<a href="http://homepage.ntu.edu.tw/~r04945041/" target="_blank">http://homepage.ntu.edu.tw/~r04945041/</a></p>
+		<style>
+			#cover h2 {
+				margin:30px 0;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				text-align: left;
+				font-size:20px;
+				}
+			#cover .sub {
+				margin: 10px 0;
+				text-align: center;
+			}
+			#cover .me {
+				margin-top: 50px;
+			}
+			#cover .me-sub {
+				margin: 0;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">JavaScript</h2>
+	</section>
+	<section class="slide">
+		<h2>JavaScript 是什麼？</h2>
+		<ul>
+			<li>是一種直譯式程式語言</li>
+			<li>目前在網頁設計最為熱門的語言</li>
+			<li>增加網頁的互動性</li>
+			<li>從前端到後端都可以用 JavaScript 完成</li>
+			<li>在 stackoverflow 的相關討論最多</li>
+		</ul>
+		<img src="images/popular.png" alt="stackjavascript" class="place right" width="50%">
+	</section>
+	<section class="slide">
+		<h2>全部都是 JavaScript</h2>
+		<img src="images/JavaScript.png" alt="JavaScript" height="80%">
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">JavaScript 不是 Java！！</h2>
+	</section>
+	<section class="slide">
+		<h2>Google Chrome JavaScript 控制台</h2>
+		<ul>
+			<li>檢視 >> 開發人員選項 >> JavaScript 控制台</li>
+			<li>console.log 通常可以用來檢查錯誤用的 (debug)</li>
+			<li>來寫我們的第一行 JavaScript</li>
+			<li>結尾加上分號是好習慣！</li>
+			<li>分號：程式敘述結束符號程式敘述結束符號</li>
+		</ul>
+		<pre>
+			<code>console.log("Hello World!");</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>練練程式頭腦 - <a href="https://scratch.mit.edu/" target="_blank">Scratch</a></h2>
+		<ul>
+			<li>很多作品可以觀摩</li>
+			<li>拖拉式邏輯方塊、介面簡單</li>
+			<li>支援外掛：<a href="http://scratchx.org/" target="_blank">ScratchX</a>
+				<ul>
+					<li>Leap Motion</li>
+					<li>Arduino</li>
+					<li>Twitter</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>一個指令一個動作！</h2>
+		<ul>
+			<li>語法 (Syntax) 正確</li>
+			<li>邏輯正確</li>
+		</ul>
+		<p>比起 HTML 和 CSS，再寫 JavaScript 要更仔細，否則真的會不能動！</p>
+	</section>
+	<section class="slide">
+		<h2>網頁裡的 JavaScript 寫在哪裡？</h2>
+		<ul>
+			<li>在 HTML 檔案裡面：直接用 &lt;script&gt;&lt;/script&gt; 包住</li>
+			<li>獨立的 .js 檔案，再用 &lt;script src="路徑"&gt; 連結</li>
+			<li>在標籤裡面的 event（不太會拿來做複雜的事情）：例如 onclick="alert('Hello World!');"</li>
+		</ul>
+		<p>好像有點熟悉？<a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/26844/" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>JavaScript 放在哪？</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html&gt;</code>
+			<code>	&lt;head&gt;</code>
+			<code>	&lt;/head&gt;</code>
+			<code>	&lt;body&gt;</code>
+			<code>	JavaScript 函示庫！</code>
+			<code>	自己寫的 JavaScript 東東</code>
+			<code>	&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>玩一下 Chrome 裡面的 console 吧！</h2>
+		<p>來做簡單的數學運算～</p>
+		<ul>
+			<li>78 + 82 = ?</li>
+			<li>67 / 25 + 74 = ?</li>
+			<li>(111 + 222 - 123) * 2 / 10</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Simple Interaction</h2>
+		<p>popup 彈跳視窗</p>
+		<ul>
+			<li>alert()</li>
+			<li>confirm()</li>
+			<li onclick="prompt('prompt!');">prompt()</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>alert()</h2>
+		<p>跳出視窗上面顯示文字給使用者看</p>
+		<pre>
+			<code>&lt;p onclick="alert('大家早安！');"&gt;CLICK ME&lt;/p&gt;</code>
+		</pre>
+		<p onclick="alert('大家早安！');">CLICK ME</p>
+	</section>
+	<section class="slide">
+		<h2>confirm()</h2>
+		<p>跳出視窗上面顯示文字並可以確定或取消</p>
+		<pre>
+			<code>&lt;script&gt;</code>
+			<code>	if (confirm("你確定？")) {</code>
+			<code>		window.open("http://tw.yahoo.com","_blank");</code>
+			<code>	}</code>
+			<code>&lt;/script&gt;</code>
+		</pre>
+		<p onclick="areYouSure();">CLICK ME</p>
+		<script>
+			function areYouSure() {
+				if (confirm("你確定？")) {
+					window.open("http://tw.yahoo.com","_blank");
+				}
+			}
+		</script>
+	</section>
+	<section class="slide">
+		<h2>Variables 變數</h2>
+		<ul>
+			<li>像一個盒子一樣，可以放東西進去</li>
+			<li>語法：var 變數名稱（盒子） = 放進盒子的值;</li>
+			<li>例：<code>var totalCost = 30;</code></li>
+			<li>放進盒子裡後，往後要用的時候就可以拿出來用</li>
+			<li>當然，也可以變換放在盒子裡面的東西</li>
+		</ul>
+		<img src="images/box.png" class="place right" width="50%">
+	</section>
+	<section class="slide">
+		<h2>JavaScript 變數命名</h2>
+		<ul>
+			<li>camelCase</li>
+			<li>只有第一個字是小寫字母開頭接大寫字母開頭</li>
+			<li>例：helloWorld, printMyName, findMyPhone</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>prompt()</h2>
+		<p>可以讓使用者輸入資訊</p>
+		<pre>
+			<code>var userInput;</code>
+			<code>userInput = prompt("請問你叫什麼名字？");</code>
+		</pre>
+		<p onclick="askName();">CLICK ME</p>
+		<script>
+			function askName() {
+				var userInput; // create variable
+				userInput = prompt("請問你叫什麼名字？");
+				if (userInput != null) {
+					alert(userInput + "，你好！");
+				}
+			}
+		</script>
+	</section>
+	<section class="slide">
+		<h2>資料型態（資料的分類）</h2>
+		<ul>
+			<li>字串 (string): "Candy", "Winnie the Pooh", "維尼"<br>
+			注意！字串不要忘記引號唷～</li>
+			<li>數字 (number): 1, 2, 4, 10</li>
+			<li>布林值 (boolean): true, false</li>
+			<li>其他: object, function</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>注意事項</h2>
+		<ul>
+			<li>字串引號可為單引號或雙引號，"It's a beautiful day"，只要外面兩個引號是一樣的就好</li>
+			<li>以下兩種是不一樣的唷！</li>
+		</ul>
+		<pre><code>var myBool = true; <mark class="comment">// Boolean</mark></code>
+			<code>var myString = "true"; <mark class="comment">// String</mark></code></pre>
+	</section>
+	<section class="slide">
+		<h2>變數的資料型態可以改變</h2>
+		<p>以下例子為從 String 變成 Number 之資料型態</p>
+		<pre>
+			<code>var myString = "Hello";</code>
+			<code>myString = 33;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>資料型態小練習</h2>
+		<p>剛剛在前面練習過將數字 (number) 做運算，現在來處理其他種類的資料型態吧！</p>
+		<ol class="double">
+			<li>字串 + 字串: "我" + "你"</li>
+			<li>字串 + 數字: "他" + 12543</li>
+			<li>字串 + 布林: "他" + true</li>
+			<li>數字 + 布林：3 + false</li>
+			<li>布林 + 布林: true + false</li>
+		</ol>
+		<p>總之，字串不管加什麼都會變成串接 (Concatenation) 的字串；false 可以當 0 來看， true則為 1</p>
+		<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators" target="_blank">參考資料</a></p>
+	</section>
+	<section class="slide">
+		<h2>看變數的資料型態</h2>
+		<p>可以使用 typeof 來得知該變數之資料型態</p>
+		<pre>
+			<code>var pikachu; <mark class="comment">// 建立變數</mark></code>
+			<code>pikachu = "你" + "他";</code>
+			<code>typeof(pikachu);</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>資料型態轉換</h2>
+		<ul>
+			<li>parseInt(要轉換的東東): 轉換為整數</li>
+			<li>parseFloat(要轉換的東東): 轉換為浮點數 (小數)</li>
+			<li>String(要轉換的東東): 轉換為字串</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>小小練習兒</h2>
+		<ol>
+			<li>新增一個名為 myVariable 的變數</li>
+			<li>將變數設為自己的名字</li>
+			<li>用 console.log(myVariable + "好可愛"); 將名字印在 console 裡面</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Comments 註解</h2>
+		<pre>
+			<code><mark class="comment">// 單行註解</mark></code>
+			<code><mark class="comment">/* 	多</mark></code>
+			<code><mark class="comment">	行</mark></code>
+			<code><mark class="comment">	註</mark></code>
+			<code><mark class="comment">	解 */</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>length</h2>
+		<p>得知該變數之長度（例：字串的長度等等）</p>
+		<pre>
+			<code>"Candy".length</code>
+		</pre>
+		<p>應該會回傳 5</p>
+	</section>
+	<section class="slide">
+		<h2>運算子</h2>
+		<ul>
+			<li>邏輯運算子
+				<ul>
+					<li>&& AND</li>
+					<li>|| OR</li>
+					<li>! NOT</li>
+				</ul>
+			</li>
+			<li>比較運算子
+				<ul>
+					<li>>, >=</li>
+					<li>&lt;, &lt;=</li>
+					<li>===, !==</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>練習使用運算子</h2>
+		<a href="http://codepen.io/stringpiggy/pen/WrzoMa?editors=0011" target="_blank">範例</a>
+	</section>
+	<section class="slide">
+		<h2>其他運算子</h2>
+		<table class="striped">
+		<tr>
+			<th>Code</th>
+			<th>Quicker Typing</th>
+		</tr>
+		<tr>
+			<td>count = count + 1</td>
+			<td>count++</td>
+		</tr>
+		<tr>
+			<td>count = count - 1</td>
+			<td>count--</td>
+		</tr>
+		<tr>
+			<td>count = count + 10</td>
+			<td>count += 10</td>
+		</tr>
+		<tr>
+			<td>count = count -20</td>
+			<td>count -= 20</td>
+		</tr>
+		<tr>
+			<td>count = count * 5</td>
+			<td>count *= 5</td>
+		</tr>
+		<tr>
+			<td>count = count / 2</td>
+			<td>count /= 2</td>
+		</tr>
+		</table>
+	</section>
+	<section class="slide">
+		<h2>流程控制 Flow control</h2>
+		<ul>
+			<li>條件判斷：幫助程式做決策</li>
+			<li>迴圈：幫助程式做重複的工作</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>if 判斷式</h2>
+		<pre>
+			<code>if (x > y) {</code>
+			<code>	如果 x > y (回傳 true) 做這裡面的事情</code>
+			<code>}</code>
+		</pre>
+		<ol>
+			<li>設定變數 x, y 為任一數 Math.random()</li>
+			<li>如果為 true，則 alert("x > y");</li>
+			<li>如果為 false，則無事發生</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>if...else</h2>
+		<pre>
+			<code>if (x > y) {</code>
+			<code>	如果 x > y (回傳 true) 做這裡面的事情</code>
+			<code>}</code>
+			<code>else {</code>
+			<code>	如果 x 沒有 > y (回傳 false) 做這裡的事情</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>if...else 練習</h2>
+		<ol>
+			<li>設定變數 x, y 為任一數 Math.random()</li>
+			<li>如果為 true，則 alert("x > y");</li>
+			<li>如果為 false，則 alert("x &lt; y");</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>if...else if...else</h2>
+		<pre>
+			<code>if(a > 500) {</code>
+			<code>	alert("a的資料大於500");</code>
+			<code>}</code>
+			<code>else if(a > 100) {</code>
+			<code>	alert("a的資料大於100");</code>
+			<code>}</code>
+			<code>else {</code>
+			<code>	alert("a的資料小於100");</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>switch</h2>
+		<pre>
+			<code>switch(變數) {</code>
+			<code>	case 1: 做事做事;</code>
+			<code>	break;</code>
+			<code>	case 2: 做事做事;</code>
+			<code>	break;</code>
+			<code>	default: 做事做事;</code>
+			<code>}</code>
+		</pre>
+		<p><a href="http://codepen.io/stringpiggy/pen/EPENWY?editors=0010" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>課堂練習七：文字小遊戲</h2>
+		<ul>
+			<li>在 codepen 或是 thimble 裡面寫都OK～</li>
+			<li>使用 confirm(), alert(), prompt() 來進行互動</li>
+			<li>使用至少一個流程控制之方式</li>
+			<li><a href="http://codepen.io/stringpiggy/pen/QymGBz?editors=0011" target="_blank">範例</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>函式 Function</h2>
+		<ul>
+			<li>函式 (function) 就像是一個黑盒子</li>
+			<li>站在函式外的觀點來看，我們不知道黑盒子是怎麼運作的，只需要知道這個黑盒子需要甚麼樣的輸入(arguments)，會吐出甚麼樣的輸出(return)即可</li>
+			<li>console.log(), String(), alert() 這些都是 function</li>
+		</ul>
+		<img src="images/function-machine.png" alt="function-img">
+	</section>
+	<section class="slide">
+		<h2>JavaScript function 語法</h2>
+		<img src="images/function.png" alt="funciton" class="place bottom" height="70%">
+	</section>
+	<section class="slide">
+		<h2>小小的練習兒</h2>
+		<ol>
+			<li>宣告一個 function 叫做 addTwo</li>
+			<li>可以接受兩個 arguments a, b</li>
+			<li>在 function 裡面將a、b相加</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>有關於 return 這件事情</h2>
+		<ul>
+			<li>如果一個函式可以吐出東西來，則需使用 return</li>
+			<li>return 代表退出該函式</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>小小練習</h2>
+		<p>回傳兩個數字裡面的最大值</p>
+		<p><a href="http://codepen.io/stringpiggy/pen/XXEpJd?editors=0011" target="_blank">練習</a></p>
+	</section>
+	<section class="slide">
+		<h2>變數：全域變數 vs 區域變數</h2>
+		<p>在函式中定義的變數，稱為區域變數。有別於定義在全域名稱空間中的全域變數。</p>
+		<ul>
+			<li>還記得函式就像是一個黑盒子嗎？</li>
+			<li>區域變數無法被外部的程式使用</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>陣列 Array</h2>
+		<img src="images/array.jpg" alt="array" width="100%">
+	</section>
+	<section class="slide">
+		<h2>陣列 Array</h2>
+		<pre>
+			<code>var myArray = [item1, item2, ...];</code>
+			<code>var myArray = [index 為 0, 1, 2, ...];</code>
+		</pre>
+		<ul>
+			<li>用 myArray[index] 去取裡面的資訊</li>
+			<li>myArray[0] 為 item1</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>極度常用的 array method</h2>
+		<ul>
+			<li>把東西從後面塞進去: push()</li>
+			<li>把東西從後面拿出來: pop()</li>
+			<li>取某一個部分: slice()</li>
+			<li>把 array 變成 string 顯示出來: join()</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/GoxBqB?editors=0011" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>何謂物件？</h2>
+		<p>不同於既有以 function 為主體聚合的程式設計模型，物件導向的程式設計是以物件(彼此間互有關聯)作為基礎。</p>
+		<ul>
+			<li>以人當作一個物件</li>
+			<li>屬性：頭（頭髮、臉部（眼睛、鼻子））、身體（四肢）</li>
+			<li>function：睡覺、運動</li>
+		</ul>
+		<p>可以漂亮地將相關的屬性、function、甚至是子物件放在一起</p>
+	</section>
+	<section class="slide">
+		<h2>物件 Object 語法</h2>
+		<p>注意：key 一定要用 "" 把他包起來喔！！！！</p>
+		<pre>
+			<code>var 物件名稱 = {</code>
+			<code>	<mark>"key"</mark>: value<mark>,</mark></code>
+			<code>	"key": value<mark>,</mark></code>
+			<code>	"key": value</code>
+			<code>};</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>物件 Object 範例</h2>
+		<pre>
+			<code>var bio = {</code>
+			<code>	"name": "Candy",</code>
+			<code>	"age": 10,</code>
+			<code>	"hobbies": "watch TV"</code>
+			<code>};</code>
+		</pre>
+		<p>bio.name 會得到什麼呢？我們用 dot notation 來存取 Object 裡面的資訊</p>
+		<p>請自行創造一個新的物件</p>
+	</section>
+	<section class="slide">
+		<h2>創造物件的另一種寫法</h2>
+		<pre>
+			<code>var bio = new Object();</code>
+			<code>bio.name = "Candy";</code>
+			<code>bio.age = 10;</code>
+			<code>bio.hobbies = "watch TV"</code>
+		</pre>
+		<p>新增 key 就直接創造 bio.想要新增的東西<br>
+		刪除 key 則是用 delete bio.key 的名稱</p>
+		<p><a href="http://codepen.io/stringpiggy/pen/VeXmMP?editors=0011" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>object 裡面可以放什麼？</h2>
+		<p>什麼都可以放！function、或是再一個 object 也行～</p>
+		<h2>呼叫 function 和 object 裡的 function</h2>
+		<ul>
+			<li>function
+				<ul>
+					<li>alert(東西)</li>
+				</ul>
+			</li>
+			<li>Object 裡的 function
+				<ul>
+					<li>東西.toString()</li>
+				</ul>
+			</li>
+		</ul>
+		<p><a href="http://www.objectplayground.com/" target="_blank">那 length 呢？</a></p>
+	</section>
+	<section class="slide">
+		<h2>while 迴圈</h2>
+		<p>用來重複做一件事情直到某個條件發生為止。</p>
+		<pre>
+			<code>while(expression) {</code>
+			<code>	如果 expression 是 true，則執行動作</code>
+			<code>	動作結束後檢查看看 expression 的狀態</code>
+			<code>}</code>
+		</pre>
+		<p>當 expression 變成 false 時會跳出迴圈<br>
+		在 while 區塊內使用 break; 敘述，可強制跳出迴圈</p>
+	</section>
+	<section class="slide">
+		<h2>for 迴圈</h2>
+		<pre>
+		<code>for (初始化; expression; 更新) {</code>
+		<code>	如果 expression 是 true，則執行動作</code>
+		<code>	動作結束後檢查看看 expression 的狀態</code>
+		<code>}</code>
+		</pre>
+		<p><a href="http://codepen.io/stringpiggy/pen/mVxRVK?editors=0011" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>小遊戲練習：剪刀、石頭、布</h2>
+		<p>document.write(內容) 可以將內容輸出到頁面上</p>
+		<ol>
+			<li>詢問使用者出的拳</li>
+			<li>電腦隨機出拳<a href="http://codepen.io/stringpiggy/pen/VeXmoM" target="_blank">範例</a></li>
+			<li>比較使用者出拳和電腦出拳（可寫成 function）</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>小遊戲練習：猜數字遊戲</h2>
+		<p><a href="http://codepen.io/stringpiggy/pen/eJMggz?editors=0010" target="_blank">範例</a></p>
+		<ul>
+			<li>接收使用者的輸入</li>
+			<li>檢查使用者是否真的輸入數字 isNaN()</li>
+			<li>隨機數字之建立 Math.random(), Math.floor()</li>
+			<li>檢查數字的範圍並做出相對的回應</li>
+		</ul>
+		<p>已經完成的同學可以試著重頭寫一遍</p>
+	</section>
+	<section class="slide">
+		<h2>一起來看看和網頁有關的事情</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="mVxRPj" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/mVxRPj/'>for loop</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		<ul>
+			<li>input[type=submit]：CSS 的 Selector，選取送出按鈕</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Document Object Model (DOM)</h2>
+	</section>
+	<section class="slide">
+		<h2>DOM: 把一個個 HTML 元素 (element) 都變成了物件 (object)</h2>
+		<p>基本上，整份文件屬於一個 document 物件</p>
+		<img src="images/DOM.png" class="place bottom" width="100%" style="margin-bottom: 3%">
+	</section>
+	<section class="slide">
+		<h2>DOM 物件之間的關係</h2>
+		<img src="images/DOM-2.png" alt="DOM" class="place bottom" height="70%">
+	</section>
+	<section class="slide">
+		<h2>DOM document object</h2>
+		<ul>
+			<li><a href="http://codepen.io/stringpiggy/pen/Wrzayg?editors=1000" target="_blank">document.write() / document.writeln()</a>: 在網頁裡寫上東西</li>
+			<li><a href="http://codepen.io/stringpiggy/pen/bEvmQj?editors=1011" target="_blank">document.querySelector() / document.querySelectorAll()</a>: 利用CSS選取方式去找東西</li>
+			<li><a href="http://codepen.io/stringpiggy/pen/YwaRyE?editors=1011" target="_blank">document.getElementsByClassName() / document.getElementById()</a></li>
+			<li><a href="http://codepen.io/stringpiggy/pen/yeKQRJ?editors=0011" target="_blank">document.addEventListener(event, function)</a>: 可以加入事件</li>
+		</ul>
+		<p>如果要修改內容要使用 element object: innerHTML()！</p>
+	</section>
+	<section class="slide">
+		<h2>事件 events</h2>
+		<p>用在addEventListener裡面時不需要on，例如onclick會變成click</p>
+		<code>document.addEventListener(click, function() {})</code>
+		<ul class="double">
+			<li>滑鼠
+				<ul>
+					<li>onclick 點擊</li>
+					<li>onmouseover 像 hover</li>
+					<li>ondblclick 雙擊</li>
+					<li>onmousedown 按著的時候</li>
+				</ul>
+			</li>
+			<li>鍵盤
+				<ul>
+					<li>onkeydown 鍵盤往下按時</li>
+					<li>onkeyup 放開按鍵時</li>
+					<li>onkeypress 按鍵</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>style object</h2>
+		<a href="http://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank">點我看清單</a>
+		<p data-height="268" data-theme-id="0" data-slug-hash="LGdXvr" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/LGdXvr/'>removeChild()</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>preventDefault()</h2>
+		<p>讓原本該執行的事情停住</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="jWzQJW" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/jWzQJW/'>preventDefault()</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>又要來練習囉～</h2>
+		<p>請大家把剛剛所學的做練習唷：）盡量搭配組合，多多嘗試！</p>
+	</section>
+	<section class="slide">
+		<h2>JSON</h2>
+		<ul>
+			<li>JavaScript Object Notation</li>
+			<li>字串 = JSON.stringify(物件)</li>
+			<li>不會把 function (method) 變成字串</li>
+			<li>一種資料格式</li>
+			<li><a href="http://jsonlint.com/" target="_blank">格式檢查</a></li>
+		</ul>
+	</section>
+	<section class="slide" id="end">
+		<h2 class="shout shrink"><a href="../05/index.html">繼續加油～</a></h2>
+		<style>
+		#end a {
+			font-size: 60px;
+		}
+		</style>
+	</section>
+	<!--<p class="badge">-->
+	<!--	<a href="https://github.com/shower/shower">Fork me on GitHub</a>-->
+	<!--</p>-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2016 Candy Tsai -->
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		@font-face {
+		  font-family: 'cwTeXYen';
+		  font-style: normal;
+		  font-weight: 500;
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+		}
+	</style>
+</head>
+<body class="shower full">
+	<header class="caption">
+		<h1 style="text-align: center; color: #FFF;">HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h1>
+		<p style="color: #FFF; text-align: center;">蔡智晴</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h2>
+		<p class="sub">jQuery</p>
+		<p class="me">講師：蔡智晴 / Candy Tsai</p>
+		<p class="me-sub">課程網站：<a href="http://homepage.ntu.edu.tw/~r04945041/" target="_blank">http://homepage.ntu.edu.tw/~r04945041/</a></p>
+		<style>
+			#cover h2 {
+				margin:30px 0;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				text-align: left;
+				font-size:20px;
+				}
+			#cover .sub {
+				margin: 10px 0;
+				text-align: center;
+			}
+			#cover .me {
+				margin-top: 50px;
+			}
+			#cover .me-sub {
+				margin: 0;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">jQuery</h2>
+	</section>
+	<section class="slide">
+		<h2>jQuery 是什麼？</h2>
+		<ul>
+			<li>一套受歡迎的 Javascript 函式庫</li>
+			<li>加快開發速度</li>
+			<li>提供簡便的特效</li>
+			<li>免除瀏覽器相容性的麻煩</li>
+		</ul>
+		<img src="images/jquery.png" alt="jQuery" class="place right" width="50%">
+	</section>
+	<section class="slide">
+		<h2>jQuery 可以做的事情</h2>
+		<ul>
+			<li>事件 events: 回應使用者的動作</li>
+			<li>DOM Manipulation: 操作網頁上 HTML 的元素</li>
+			<li>效果 effects: 加上動畫</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>還記得上一章的範例嗎？</h2>
+		<p data-height="200" data-theme-id="0" data-slug-hash="mVxRPj" data-default-tab="js" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/mVxRPj/'>TOS</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		<p data-height="193" data-theme-id="0" data-slug-hash="adYPJj" data-default-tab="js" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/adYPJj/'>TOS Simple</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>最基本的～把jQuery加近來！</h2>
+		<p>就像增加一個外部的 JavaScript 檔案一樣加近來</p>
+		<p><a href="https://developers.google.com/speed/libraries/#jquery" target="_blank">Google CDN</a></p>
+	</section>
+	<section class="slide">
+		<h2>確保我們不會提早做事情</h2>
+		<pre>
+		<code>$(document).ready(function() {</code>
+		<code>	等網頁讀好我們在開始動作</code>
+		<code>});</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>剛剛那件事的簡寫</h2>
+		<pre>
+			<code>$(function(){</code>
+  			<code>	// jQuery methods go here...</code>
+			<code>});</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>jQuery 語法</h2>
+		<img src="images/syntax.png" alt="jQuery-syntax" class="place bottom" style="margin-bottom: 5%;">
+	</section>
+	<section class="slide">
+		<h2>jQuery 變數命名</h2>
+		<p>會用$做開頭</p>
+		<pre>
+			<code>var $變數 = 值;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="shout">基本操作</h2>
+	</section>
+	<section class="slide">
+		<h2>神奇的$()</h2>
+		<code>$(SELECTOR) or $("HTML放字串裡")</code>
+		<p>當放HTML進去，則可以產生一個新的元素</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="wMmRxo" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/wMmRxo/'>jQuery EX01</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>.text() / .html() / .css()</h2>
+		<ul>
+			<li>.text() 只能加入文字</li>
+			<li>.html() 就可以加入 html 的元素 &lt;script&gt; 不行</li>
+			<li>.css() 改變選取物的 css
+				<ul>
+					<li>東西.css("屬性","值")</li>
+					<li>東西.css(<mark>{</mark>"屬性"<mark>:</mark> "值"<mark>,</mark><br>
+					"屬性": "值"<mark>}</mark>)</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>選擇器補充</h2>
+		<p>為了讓大家有更多方式可以去做選擇，再補充幾個之前沒教過的</p>
+		<ul>
+			<li>選擇全部 $("*")</li>
+			<li>選擇屬性 $("[type='submit']")</li>
+			<li>選擇標籤及屬性 $("input[type='submit]")</li>
+		</ul>
+		<p data-height="150" data-theme-id="0" data-slug-hash="GodZjN" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/GodZjN/'>jQuery selector demo</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide" id="like">
+		<h2>Like Button - .toggleClass() 練習</h2>
+		<div class="like-button">Like</div>
+		<ul>
+			<li>toggle 的意思就像開關一樣，點一次開、再點一次關、再一次就開...</li>
+			<li>在 jQuery 裡，this 的意思是指我們上一層所選到的物件</li>
+		</ul>
+		<p>大家可以試著在前面加入一個讚的圖示 (font-awesome)</p>
+		<style>
+			#like .like-button {
+			  border: 2px solid;
+			  text-align: center;
+			  background-color: skyblue;
+			  margin: 0px;
+			  width: 100px;
+			  height: 50px;
+			  line-height: 50px;
+			  }
+			#like .active {
+			  background-color: green;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>剛剛我們使用了</h2>
+		<ul>
+			<li>toggleClass()</li>
+			<li>jQuery 的 this</li>
+			<li>event: click</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>.ready()</h2>
+		<p>根據 <a href="http://api.jquery.com/ready/" target="_blank">jQuery 官網</a>的敘述，.ready() 就是<br>
+		A function to execute after the DOM is ready.</p>
+		<p>所以 $(document) 選取 DOM，.ready() 會在 DOM 準備好了之後才執行()裡的動作</p>
+	</section>
+	<section class="slide">
+		<h2>event: keyup/keydown</h2>
+		<ul>
+			<li>根據剛剛我們做的按鈕，現在把觸發的是件改成 keyup。</li>
+			<li>要特定某一個按鍵才能觸發事件呢？<a href="http://keycode.info" target="_blank">Key Code</a></li>
+			<li>條件篩選可以用 <a href="https://api.jquery.com/event.which/" target="_blank">event.which</a></li>
+		</ul>
+		<p>為什麼不用 keypress 呢？</p>
+	</section>
+	<section class="slide">
+		<h2><a href="https://api.jquery.com/addClass/" target="_blank">.addClass() / .removeClass()</a></h2>
+		<ul>
+			<li>.addClass() 就是加 class 進去</li>
+			<li>.removeClass() 就是移除 class</li>
+			<li>看到 function 名稱有 Class，就不用加.</li>
+		</ul>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/28206" target="_blank">練習</a></p>
+	</section>
+	<section class="slide">
+		<h2>.append() / .appendTo()</h2>
+		<ul>
+			<li>B.append(A) 把 A 塞到 B 裡面</li>
+			<li>B.appendTo(A) 把 B 塞到 A 裡面</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/rxvLqW" target="_blank">CodePen</a> │ <a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/28258/" target="_blank">Thimble</a> 練習</p>
+	</section>
+	<section class="slide">
+		<h2>.prepend() / .prependTo()</h2>
+		<ul>
+			<li>B.prepend(A) 把 A 塞到 B 裡面（從前面）</li>
+			<li>B.prependTo(A) 把 B 塞到 A 裡面（從前面）</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/jWxMWr" target="_blank">也可以加選取的東西</a></p>
+	</section>
+	<section class="slide">
+		<h2>.remove() / .add()</h2>
+		<ul>
+			<li>.remove() 移除選取物件</li>
+			<li>.add() 增加選取物件</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/KVRgma" target="_blank">練習一下</a></p>
+	</section>
+	<section class="slide">
+		<h2>.hide() / .show() / .toggle()</h2>
+		<ul>
+			<li>.hide() 隱藏選取物件</li>
+			<li>.show() 顯示選取物件</li>
+			<li>.toggle() 在 .hide() / .show() 之間動</li>
+			<li>(時間) ＝> 動畫</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/gPzLmm" target="_blank">練習</a></p>
+	</section>
+	<section class="slide">
+		<h2>.next() / .prev() /<br>.first() / .last()</h2>
+		<img src="images/DOM-2.png" class="place right" height="68%">
+		<p>若我們在 ul.attribution 的位置</p>
+		<ul>
+			<li>h2.title 就會是 prev</li>
+			<li>p.description 就會是 next</li>
+			<li>first 和 last 會是誰呢？(要在同一層使用)</li>
+		</ul>
+		<p><a href="http://codepen.io/stringpiggy/pen/BjxQJm" target="_blank">順便練習開變數</a></p>
+	</section>
+	<section class="slide">
+		<h2>.children() / .parent()</h2>
+		<ul>
+			<li>.children() 找下一層的子代</li>
+			<li>.parent() 找上一層的親代</li>
+		</ul>
+		<img src="images/children.png" class="place right" height="50%" style="margin-right: 5%;">
+		<p><a href="http://codepen.io/stringpiggy/pen/wMjoEm" target="_blank">找小孩囉～</a></p>
+	</section>
+	<section class="slide">
+		<h2>最後一天了～本課程注意事項</h2>
+		<ul>
+			<li>最後收件時間：1/31 23:59</li>
+			<li>評分完成：2/1 22:00</li>
+			<li>成績有問題請在 <strong>2/2 22:00</strong> 前留悄悄話，評分標準投影片有寫</li>
+			<li>通過查詢：2/3 08:00（除特殊原因，否則不再更改）</li>
+			<li>課堂練習六及九各佔20%（期初投影片有寫）</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/28587/" target="_blank">課堂練習八：jQuery 基本操作</a></h2>
+		<ol>
+			<li>先觀察 HTML / CSS 看看要選的東西的名稱是啥</li>
+			<li>每一篇文章最外圈的 class 為 article</li>
+			<li>CSS 裡面有個東西 display 是 none（意旨隱藏起來）</li>
+			<li>我們按文章時就應該要有東西 .show() 出來</li>
+			<li>為什麼第一篇文章的顏色不一樣？(可以看 CSS)</li>
+			<li>已經做完使用滑鼠點擊的同學，試著用鍵盤也能操控（參考：open(o) 可以打開內容、next(n) 可以換下一篇）</li>
+			<li>鍵盤操作提示：一直往下一篇超過最後一個時，.length 會是 0</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>.clone()</h2>
+		<ul>
+			<li>通常不會單獨使用</li>
+			<li>複製完東西總是要找個地方貼上</li>
+		</ul>
+		<p data-height="268" data-theme-id="0" data-slug-hash="NxMdKO" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/NxMdKO/'>clone</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>.attr() / .prop()</h2>
+		<ul>
+			<li>.attr() 取得屬性的值</li>
+			<li>.prop() 和 .attr() 的中文很像，所以看使用時機</li>
+			<li>.prop() 具有 true 和 false 两个属性的属性，如 checked, selected 或者 disabled 使用prop()，其他的使用 attr()</li>
+		</ul>
+		<p data-height="200" data-theme-id="0" data-slug-hash="bEMgLJ" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/bEMgLJ/'>check example</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>.val()</h2>
+		<ul>
+			<li>主要用在表單上面，可以抓取使用者輸入的值</li>
+			<li>試著練習改成使用 textarea</li>
+			<li>那如果.val()裡面有值的時候會發生什麼事情</li>
+		</ul>
+		<p data-height="250" data-theme-id="0" data-slug-hash="gPzgbe" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/gPzgbe/'>val</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>動畫 animation</h2>
+		<p>內建特效</p>
+		<ul>
+			<li>show hide toggle</li>
+			<li>fadeIn fadeOut fadeToggle</li>
+			<li>slideDown slideUp slideToggle</li>
+		</ul>
+		<p data-height="268" data-theme-id="0" data-slug-hash="EPLZRW" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/EPLZRW/'>slide example</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2><a href="http://api.jquery.com/animate/" target="_blank">自訂動畫 .animate()</a></h2>
+		<ul>
+			<li>若屬性的值並非數字，如：background-color，則大都不能直接用這個方法</li>
+			<li>non-style 屬性如：ScrollTop, ScrollLeft 可以使用</li>
+			<li>簡寫如：background, font, border 沒有完整支援</li>
+			<li>注意：如果要使用動畫的對象為 hidden 的話，雖然動畫會跑但我們看不到</li>
+			<li>jQuery 本身只有兩種執行模式：swing, linear</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>.animate() 寫法</h2>
+		<pre>
+			<code>東西.animate({</code>
+			<code>	屬性: 值,</code>
+			<code>	屬性: 值</code>
+			<code>}, 時間, 動畫效果);</code>
+		</pre>
+		<p data-height="200" data-theme-id="0" data-slug-hash="obdQZW" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/obdQZW/'>jQuery animation</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide" id="methods">
+		<h2 class="shout"><a href="http://api.jquery.com/" target="_blank">jQuery API 完整列表</a></h2>
+		<style>
+		#methods a {
+			font-size: 100px;
+		}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>關於使用 library、plugin、framework 等外部資源</h2>
+		<ul>
+			<li>用 library 或別人寫好的 plugin 好像很遜？不是自己寫的？但是還是要懂一些基本才能用得得心應手～而且有些 plugin 也不是那麼容易上手</li>
+			<li>有時候先把東西做出來反而會對背後的原理比較有興趣：）</li>
+			<li>寫網頁、寫程式剛開始也是臨摹，等臨摹夠了，自然就會想要努力創造新東西</li>
+			<li>重點是要主動找資料，很多答案就在 Google 裡面，但不是每一個人都挖得出來</li>
+		</ul>
+		<p style="color: lightgray; margin-top: 0px; text-align: center; font-size: 60px;">英文好會輕鬆超多</p>
+	</section>
+	<section class="slide" id="caution">
+		<h2 class="shout shrink">當使用網路上別人寫好的東西時<br>請記得一定要遵守 <a href="https://www.smashingmagazine.com/2010/03/a-short-guide-to-open-source-and-similar-licenses/" target="_blank">license</a>～</h2>
+		<style>
+		#caution .shout, #caution2 .shout {
+			font-size: 60px;
+		}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>課堂練習九：還記得上次的產品網站嗎？</h2>
+		<ol>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/29009" target="_blank">想要重新來過可以使用這個：）</a></li>
+			<li>Bootstrap Javascript 的部分需要用到 jQuery，記得先加入 jQuery 唷</li>
+			<li>加入 <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> JavaScript 的部分</li>
+			<li>更新 Navbar</li>
+			<li>介紹 Bootstrap JavaScript 功能</li>
+			<li>今天做完就可以交到課堂練習九囉，至少要把 Navbar 功能完成以及加入動畫</li>
+		</ol>
+	</section>
+	<section class="slide" id="showcase">
+		<h2>網站作品</h2>
+		<p>看完大家的成品真的很開心，也希望你們跟我一樣開心～<br>還記得作業二的自我介紹嗎？<br>現在真的可以好好美化它一番了：）<br>如果是設計相關的朋友也可以寫一個放作品集的網站</p>
+		<p>下面列了幾位同學上次練習的成果</p>
+		<ol>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/s8414102/26646" target="_blank">產品功能介紹</a></li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/webtalent/26749/" target="_blank">產品功能介紹 2</a></li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/shanjulin/26660" target="_blank">麵包機</a></li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/mtorange/26360/" target="_blank">區塊顏色</a></li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/tlery/26346/" target="_blank">橫軸滑動</a></li>			
+		</ol>
+		<style>
+		#showcase li {
+			display: inline-block;
+			margin-left: 40px;
+		}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>HTML data 屬性</h2>
+		<ul>
+			<li>就像我們 class 可以自己命名一樣，data 屬性也是如此</li>
+			<li>用途：多存放一些資料讓我們在寫 JavaScript 的時候可以去抓</li>
+		</ul>
+		<p data-height="268" data-theme-id="0" data-slug-hash="vLjvKv" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/vLjvKv/'>jQuery data</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>更新 Navbar</h2>
+		<p><a href="http://getbootstrap.com/components/#navbar" target="_blank">Bootstrap Navbar 範例</a></p>
+		<p>aria 屬性是給身障人士專用的</p>
+	</section>
+	<section class="slide">
+		<h2>ScrollSpy（如課程網站）</h2>
+		<ul>
+			<li>需要 Bootstrap nav</li>
+			<li>相對應的 ID</li>
+			<li>加入下面的 JavaScript</li>
+		</ul>
+		<pre>
+			<code>$('body').scrollspy({</code>
+      		<code>	target: '#top-navbar'</code>
+    		<code>})</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>網頁動畫 plugin</h2>
+		<ul>
+			<li><a href="http://mynameismatthieu.com/WOW/index.html" target="_blank">WOW.js</a> (配合 Animate.css 使用) 使用超簡單</li>
+			<li><a href="http://johnpolacek.github.io/superscrollorama/" target="_blank">Superscrollorama</a> (已經停止開發，見下一項)</li>
+			<li><a href="http://janpaepke.github.io/ScrollMagic/" target="_blank">ScrollMagic</a> (上一項推薦)</li>
+			<li><a href="http://greensock.com/gsap" target="_blank">GSAP</a> (很強大，但是使用難度高) <a href="http://greensock.com/?example=howls-moving-castle" target="_blank">範例</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow" style="font-size: 120px;">套好動畫之後記得要繳交網址唷！</h2>
+	</section>
+	<section class="slide">
+		<h2><a href="http://jqueryui.com/" target="_blank">jQuery UI</a></h2>
+		<ul>
+			<li>更多效果</li>
+			<li>拖曳等等的互動</li>
+			<li>對話視窗之類的 Widgets</li>
+			<li>可以看看 DEMO</li>
+			<li>如何使用？一樣到 <a href="https://cdnjs.com" target="_blank">cdnjs</a> 找</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>jQuery vs JavaScript</h2>
+		<ul>
+			<li><a href="http://youmightnotneedjquery.com/" target="_blank">YOU MIGHT NOT NEED JQUERY</a></li>
+			<li><a href="https://goo.gl/ooBE44" target="_blank">應該要先學 jQuery 還是 JavaScript？</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>實用工具 - <a href="http://www.pythontutor.com/javascript.html#mode=edit" target="_blank">JavaScript Tutor</a></h2>
+		<p>用來看程式到底跑到哪裡了～</p>
+		<p><a href="http://www.pythontutor.com/javascript.html#code=for+(var+i+%3D+0%3B+i+%3C+5%3B+i%2B%2B%29+%7B%0A++console.log(i%29%3B%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=js&rawInputLstJSON=%5B%5D&curInstr=11" target="_blank">範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>有關於 <a href="http://sass-lang.com/" target="_blank">Sass SCSS</a></h2>
+		<p>基礎班沒辦法帶大家認識到 Sass / SCSS 的部分</p>
+		<ul>
+			<li>網站好不容易寫好了，但最近想要把顏色換掉，色碼一個一個改好辛苦</li>
+			<li>Sass 可以設定變數，這樣就可以一次換了～</li>
+		</ul>
+	</section>
+	<section class="slide" id="end">
+		<h2 class="shout shrink">告一段落囉，希望大家回去還是要繼續練習 :）</h2>
+		<style>
+		#end h2 {
+			font-size: 100px;
+		}
+		</style>
+	</section>
+	<!--<p class="badge">-->
+	<!--	<a href="https://github.com/shower/shower">Fork me on GitHub</a>-->
+	<!--</p>-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<!-- Examples -->
+	<!-- Like Button -->
+	<script>
+		var main = function() {
+  $(".like-button").click(function() {
+    $(this).toggleClass("active");
+  });
+};
+
+$(document).ready(main);
+	</script>
+	<!-- Copyright © 2016 Candy Tsai -->
+</body>
+</html>

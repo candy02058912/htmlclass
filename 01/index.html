@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		@font-face {
+		  font-family: 'cwTeXYen';
+		  font-style: normal;
+		  font-weight: 500;
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+		}
+	</style>
+</head>
+<body class="shower full">
+	<header class="caption">
+		<h1 style="text-align: center; color: #FFF;">HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h1>
+		<p style="color: #FFF; text-align: center;">蔡智晴</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h2>
+		<p class="sub">工具使用、HTML</p>
+		<p class="me">講師：蔡智晴 / Candy Tsai</p>
+		<p class="me-sub">課程網站：<a href="http://homepage.ntu.edu.tw/~r04945041/" target="_blank">http://homepage.ntu.edu.tw/~r04945041/</a></p>
+		<style>
+			#cover h2 {
+				margin:30px 0;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				text-align: left;
+				font-size:20px;
+				}
+			#cover .sub {
+				margin: 10px 0;
+				text-align: center;
+			}
+			#cover .me {
+				margin-top: 50px;
+			}
+			#cover .me-sub {
+				margin: 0;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout">HTML到底長什麼樣子？</h2>
+	</section>
+	<section class="slide">
+	<h2>HTML長這個樣子！</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="WrZazQ" data-default-tab="html" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/WrZazQ/'>Example 1</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>用什麼寫 HTML？</h2>
+		<ul>
+			<li>本機端
+				<ol>
+					<li>記事本 (Windows)</li>
+					<li><a href="https://notepad-plus-plus.org/" target="_blank">NotePad++</a> (Windows)</li>
+					<li><a href="http://www.sublimetext.com/" target="_blank">Sublime Text</a> (Windows/Mac/Linux)</li>
+				</ol>
+			</li>
+			<li>雲端
+				<ol>
+					<li><a href="http://codepen.io/" target="_blank">Codepen</a></li>
+					<li><strong><a href="https://thimble.mozilla.org/" target="_blank">Mozilla Thimble</a></strong></li>
+				</ol>
+			</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">Mozilla Thimble 使用說明</h2>
+	</section>
+	<section class="slide">
+		<img src="images/Thimble01.png" class="cover">
+	</section>
+	<section class="slide">
+		<img src="images/Thimble02.png" class="cover">
+	</section>
+	<section class="slide">
+		<img src="images/Thimble03.png" class="cover">
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">HTML 標籤</h2>
+	</section>
+	<section class="slide">
+		<h2>HTML 的意義</h2>
+		<ul>
+			<li>HyperText Markup Language</li>
+			<li>Markup 為標籤的意思</li>
+			<li>使用標籤 (Tag) 來標示功能單位，簡單易學、容易上手。</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>簡史</h2>
+		<ol>
+			<li>HTML 2.0：1995年11月發布。</li>
+			<li>HTML 3.2：1997年1月發布為 W3C 推薦標準 (W3C Recommendation)。</li>
+			<li>HTML 4.0：1997年12月發布為 W3C 推薦標準。</li>
+			<li>HTML 4.01 (小幅修正)：1999年12月發布為 W3C 推薦標準。</li>
+			<li>HTML 5：2012年發布為 W3C 候選推薦。</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Tag 標籤</h2>
+		<ul>
+			<li>用小於 &lt; 和大於 &gt; 兩個符號所包住的文字，我們稱為<span style="color:red;">標籤</span></li>
+			<li>標籤<span style="color:red;">通常成對存在</span>，有開始標籤和結束標籤。</li>
+			<li>夾在開始和結束標籤中的內容稱為標籤的內文 (inner HTML or inner Text)。</li>
+		</ul>
+		<pre>
+			<code><mark>&lt;strong&gt;</mark><strong>我們要強調的文字，通常以粗體呈現</strong><mark>&lt;/strong&gt;</mark></code>
+			<code>&lt;p&gt;我們應該要&lt;strong&gt;快樂&lt;/strong&gt;地學習&lt;/p&gt;</code>
+		</pre>
+	<p>我們應該要<strong>快樂</strong>地學習</p>
+	</section>
+	<section class="slide">
+		<h2>標籤內文</h2>
+		<ul>
+			<li>內文可以是純文字或其他標籤</li>
+		</ul>
+		<pre><code>&lt;p&gt;我們應該要<mark>&lt;strong&gt;</mark>快樂<mark>&lt;/strong&gt;</mark>地學習&lt;/p&gt;</code></pre>
+	<p>我們應該要<strong>快樂</strong>地學習</p>
+	</section>
+	<section class="slide">
+	<h2>Tag, Element, Attribute</h2>
+	<h3>標籤、元素、屬性</h3>
+	<pre><code>&lt;標籤名 屬性1="值1" 屬性2="值2"&gt;內容&lt;/標籤名&gt;</code></pre>
+	</section>
+	<section class="slide">
+		<h2>觀念測試！</h2>
+		<h3>下列何者正確</h3>
+		<ol>
+			<li>&lt;body&gt;&lt;p&gt;&lt;/p&gt;&lt;/body&gt;</li>
+			<li>&lt;body&gt;&lt;p&gt;&lt;/body&gt;&lt;/p&gt;</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>HTML 文件的基本要素</h2>
+		<pre>
+			<code class="mark">&lt;!DOCTYPE html&gt; 告訴瀏覽器這是一份 HTML文件</code>
+			<code>&lt;html&gt;</code>
+			<code>	&lt;head&gt;</code>
+			<code>		描述網頁用的資料 Metadata</code>
+			<code>	&lt;/head&gt;</code>
+			<code>	&lt;body&gt;</code>
+			<code>		實際顯示在畫面中的網頁內容</code>
+			<code>	&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>不含說明版本</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html&gt;</code>
+			<code>	&lt;head&gt;</code>
+			<code>	&lt;/head&gt;</code>
+			<code>	&lt;body&gt;</code>
+			<code>	&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>認識 title 標籤</h2>
+		<pre>
+			<code>&lt;head&gt;</code>
+			<code class="mark">	&lt;title&gt;網頁標題&lt;/title&gt;</code>
+			<code>&lt;/head&gt;</code>
+		</pre>
+		<img src="images/title.png" alt="title" width="100%">
+	</section>
+	<section class="slide">
+		<h2>認識 h1～h6 標籤</h2>
+		<p>h1 標題一最大，而最小為 h6 標題六</p>
+		<pre>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	&lt;h1&gt;標題一&lt;/h1&gt;</code>
+			<code>&lt;/body&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>認識 p 標籤</h2>
+		<pre>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	&lt;p&gt;代表一個段落&lt;/p&gt;</code>
+			<code>&lt;/body&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>中文出現亂碼怎麼辦？</h2>
+		<p>基本上，現在的瀏覽器都很聰明，故通常可以正確地自動判斷。但偶爾還是會出錯，所以我們可以在 head 元素裡加上：</p>
+		<pre>
+			<code>&lt;head&gt;</code>
+			<code class="mark">	&lt;meta charset="utf-8"&gt;</code>
+			<code>&lt;/head&gt;</code>
+		</pre>
+	</section>
+	<section class="slide" id="lab-1">
+		<h2>實作一：我的第一個網頁</h2>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24762/" target="_blank">Mozilla Thimble 連結</a></p>
+		<img src="images/Thimble04.png" alt="remix">
+		<style>
+		#lab-1 img:hover {
+			content: url('images/Thimble05.png');
+		}
+		</style>
+	</section>
+	<section class="slide" id="tags">
+		<h2 class="shout shrink">準備好認識更多標籤了嗎？</h2>
+	</section>
+	<section class="slide">
+		<h2>換行、空白字元、註解</h2>
+		<p data-height="426" data-theme-id="0" data-slug-hash="OMxaQb" data-default-tab="html" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/OMxaQb/'>Example 2</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>學習從模仿開始</h2>
+		<p>首先我們來觀察一個網頁大致上會用到哪些標籤</p>
+		<img src="images/news.jpg" alt="example">
+	</section>
+	<section class="slide">
+		<h2>到目前為止我們學會了：</h2>
+		<ol>
+			<li>&lt;html&gt; 根元素</li>
+			<li>&lt;head&gt;、&lt;title&gt;文件資料元素</li>
+			<li>&lt;h1&gt;～&lt;h6&gt; 標題系列</li>
+			<li>&lt;p&gt; 段落</li>
+			<li>&lt;br&gt; 換行、&amp;nbsp;空白字元</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>讓我們來看看世界上第一個網頁吧！</h2>
+		<p>網址：<a href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html" target="_blank">點我來傳送！</a></p>
+	</section>
+	<section class="slide">
+		<h2>超連結 a</h2>
+		<p>利用&lt;a&gt;建立超連結。標籤屬性 href 的值代表要連結的網址，內文代表要顯示在畫面上的文字。</p>
+		<p>如果要用新分頁開啟則再加上 target 屬性，而值則輸入 _blank</p>
+		<pre>
+			<code>&lt;a href="連結網址"&gt;文字、圖片&lt;/a&gt;</code>
+			<code>&lt;a href="連結網址" target="_blank"&gt;文字、圖片&lt;/a&gt;</code>
+		</pre>
+		<a href="https://tw.yahoo.com/" target="_blank">Yahoo!奇摩</a>
+	</section>
+	<section class="slide">
+		<h2>圖片 img</h2>
+		<p>利用&lt;img&gt;標籤加入圖片。屬性 src 代表欲顯示的圖片所在位址(URL)。<br>這是一個不需要內文的標籤。</p>
+		<pre>
+			<code>&lt;img src="網址" alt="圖壞掉時顯示的字" (width="寬" height="高")&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>嵌入框 iframe</h2>
+		<pre>
+			<code>&lt;iframe src="網址"&gt;&lt;/iframe&gt;</code>
+		</pre>
+		<iframe src="https://stringpiggy.hpd.io" height="200" width="600"></iframe>
+	</section>
+	<section class="slide">
+		<h2>範例</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="RrLqOG" data-default-tab="html" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/RrLqOG/'>Example 3</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>網址路徑：絕對 VS 相對</h2>
+		<p>通常如檔案在相同伺服器上，則會使用相對路徑，而如果要連結外部網址才會使用絕對路徑。</p>
+		<pre>
+			<code>&lt;img src="images/image.png"&gt;</code>
+			<code>&lt;img src="http://www.w3schools.com/images/h_logo.gif"&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>文字重點、強調 strong、em</h2>
+		<p>通常如檔案在相同伺服器上，則會使用相對路徑，而如果要連結外部網址才會使用絕對路徑。</p>
+		<pre>
+			<code>&lt;strong&gt;重點文字、預設為粗體&lt;/strong&gt;</code>
+			<code>&lt;em&gt;強調文字、預設為斜體&lt;/em&gt;</code>
+		</pre>
+		<p>strong:<strong>重點</strong><br>em:<em>強調</em></p>
+	</section>
+	<section class="slide">
+		<h2>水平分隔線 hr</h2>
+		<p>通常如檔案在相同伺服器上，則會使用相對路徑，而如果要連結外部網址才會使用絕對路徑。</p>
+		<pre>
+			<code>&lt;hr&gt;</code>
+			<code>&lt;hr size="寬度" color="顏色" width="長度" align="水平線對齊方向"&gt;</code>
+			<code>&lt;hr size="2px" color="blue" width="50%" align="right"&gt;</code>
+		</pre>
+		<p>第三行範例</p>
+		<hr size="2px" color="blue" width="50%" align="right">
+	</section>
+	<section class="slide">
+		<h2>有順序的清單 ol</h2>
+		<p>清單元素裡每一個項目都要用&lt;li&gt;&lt;/li&gt;來包起來</p>
+		<pre>
+			<code>&lt;ol&gt;</code>
+			<code>	&lt;li&gt;項目1&lt;/li&gt;</code>
+			<code>	&lt;li&gt;項目2&lt;/li&gt;</code>
+			<code>&lt;/ol&gt;</code>
+		</pre>
+		<ol>
+			<li>項目1</li>
+			<li>項目2</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>有順序的清單 ol</h2>
+		<p>當&lt;li&gt;裡輸入 value 屬性時，可調整順序</p>
+		<pre>
+			<code>&lt;ol&gt;</code>
+			<code>	&lt;li value="20"&gt;項目20&lt;/li&gt;</code>
+			<code>	&lt;li&gt;項目21&lt;/li&gt;</code>
+			<code>&lt;/ol&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>無順序的清單 ul</h2>
+		<p>清單元素裡每一個項目都要用&lt;li&gt;&lt;/li&gt;來包起來</p>
+		<pre>
+			<code>&lt;ul&gt;</code>
+			<code>	&lt;li&gt;項目&lt;/li&gt;</code>
+			<code>	&lt;li&gt;項目&lt;/li&gt;</code>
+			<code>&lt;/ul&gt;</code>
+		</pre>
+		<ul>
+			<li>項目</li>
+			<li>項目</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>定義列表 dl</h2>
+		<p>具有縮排效果</p>
+		<pre>
+			<code>&lt;dl&gt;</code>
+			<code>	&lt;dt&gt;項目標題&lt;/dt&gt;</code>
+			<code>	&lt;dd&gt;項目描述&lt;/dd&gt;</code>
+			<code>&lt;/dl&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>範例</h2>
+		<p data-height="426" data-theme-id="0" data-slug-hash="mVBoOy" data-default-tab="html" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/mVBoOy/'>Example 4</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>課堂練習一</h2>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24786/" target="_blank">Mozilla Thimble 網址</a></p>
+		<p>練習時間：10～15 min</p>
+		<p>這個要<a href="../index.html#upload" target="_blank">上傳</a>給我！！！！</p>
+		<p>檔案名稱：學號_姓名_EX1.zip</p>
+		<img src="images/thimble-upload.png" class="place right space" width="30%">
+		<style>
+			.space {
+				margin: 0 10%;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2>表格 table</h2>
+		<p>用&lt;tr&gt;建立一個列 (Table Row)，&lt;tr&gt;必須被包在&lt;table&gt;標籤中<br>
+		&lt;td&gt;：資料欄 (Table Data)；&lt;th&gt;：標頭 (Table Header)</p>
+		<pre>
+			<code>&lt;table&gt;</code>
+			<code>	&lt;tr&gt;</code>
+			<code>		&lt;th&gt;標頭&lt;/th&gt;</code>
+			<code>		&lt;td&gt;內容&lt;/td&gt;</code>
+			<code>	&lt;/tr&gt;</code>
+			<code>&lt;/table&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>表格 table</h2>
+		<p data-height="320" data-theme-id="0" data-slug-hash="EPwMmd" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/EPwMmd/'>Example 5</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		<ul class="double">
+			<li>border="1" 代表邊框為 1</li>
+			<li>&lt;tr&gt;裡只能裝&lt;td&gt;或&lt;th&gt;</li>
+			<li>colspan 為要跨幾列</li>
+			<li>rowspan 要跨幾行</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>table 免崩潰！</h2>
+		<p>學會基礎之後，就要講求效率～</p>
+		<p><a href="http://html-tables.com/" target="_blank">超簡約表格產生器</a></p>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">天哪！休息一下</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">研究一下 Google Chrome 吧！</h2>
+	</section>
+	<section class="slide">
+		<h2>Google Chrome 開發人員工具</h2>
+		<img src="images/chrome-dev.png" alt="google check" height="60%">
+	</section>
+	<section class="slide">
+		<h2>Google Chrome 開發人員工具</h2>
+		<img src="images/google-check.png" alt="google check" height="60%">
+	</section>
+	<section class="slide">
+		<h2>Google Chrome 開發人員工具</h2>
+		<ul>
+			<li>快速編輯、預覽</li>
+			<li>檢視元素詳細資訊</li>
+			<li>調整瀏覽模式</li>
+			<li>調整開發人員工具位置</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">還記得課堂練習一嗎？</h2>
+	</section>
+	<section class="slide">
+		<h2>製作選單</h2>
+		<ul>
+			<li>每個標籤都用到了，但是亂七八糟</li>
+			<li>現在來看看一樣的東西可以做出什麼樣的成果！</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24795/" target="_blank">選單傳送門</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>通用屬性 id class</h2>
+		<p>大部分的元素都有的屬性</p>
+		<ul>
+			<li>id：只有一個、可以用在選單上（利用#做選擇）</li>
+			<li>class：可以重複使用</li>
+			<li>用於CSS的selector能選取、JavaScript方便操作</li>
+		</ul>
+		<pre>
+			<code>&lt;a href="#id名稱"&gt;超連結&lt;/a&gt;</code>
+		</pre>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24804/" target="_blank">Mozilla Thimble</a><br>
+		注意：在Thimble的編輯模式的預覽無法正常使用！</p>
+	</section>
+	<section class="slide">
+		<h2 title="我是title">通用屬性 title style</h2>
+		<p>大部分的元素都有的屬性</p>
+		<ul>
+			<li title="滑鼠移過來">title：工具提示（tooltip）</li>
+			<li>style：CSS 要出現囉！</li>
+		</ul>
+		<pre>
+			<code>&lt;h2 title="文字"&gt;OOO&lt;/h2&gt;</code>
+			<code>&lt;h2 style="CSS的東東"&gt;OOO&lt;/h2&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>今日概要</h2>
+		<ol>
+			<li>複習</li>
+			<li>隨堂測驗</li>
+			<li>課堂練習一觀摩</li>
+			<li>課堂練習二：自我介紹</li>
+			<li>HTML</li>
+			<li>CSS</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>有關課堂練習一</h2>
+			<p>我們總共會有至少六次的課堂練習（含昨天），因原本檔案上傳的方式狀況較多，因此改用直接填表單、輸入 Publish 後網址的方式。</p>
+			<p>已經 Publish 的網址會故定（除非有按過 Unplublish），填一次就好也可以隨時更新，就不用重新上傳囉：）</p>
+			<p>故課堂練習一<strong>不算分</strong>，如有填新的繳交表單則加總分5分。</p>
+			<p>1/23（六）晚間會公布大家本週的繳交狀況～</p>
+	</section>
+	<section class="slide">
+		<h2>Mozilla Thimble 小提醒</h2>
+		<ul>
+			<li>請記得登入才能儲存 Project</li>
+			<li>只要按下 Remix 就會存一份到自己的 Project 裡</li>
+			<li>可以更改名稱方便自己做分辨</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>課堂練習二</h2>
+		<p>可以的話，盡量放一張自己的照片</p>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24896/" target="_blank">Mozilla Thimble 傳送門</a></p>
+		<p>練習時間：10～15分鐘，等教完 css 再繼續完成</p>
+	</section>
+	<section class="slide">
+		<h2>HTML5 語意標籤</h2>
+		<ul>
+			<li>&lt;section&gt;：章節 / 小節</li>
+			<li>&lt;article&gt;：一篇文章</li>
+			<li>section 和 article 可以互相包含</li>
+			<li>&lt;nav&gt;：<strong>主要</strong>選單</li>
+			<li>&lt;header&gt;、&lt;footer&gt;：文章段落或頁面的開頭、結尾</li>
+			<li>&lt;aside&gt;：可以移除而不影響到理解主要內容（側邊欄）</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>網頁排版（<a href="http://alistapart.com/article/previewofhtml5" target="_blank">資料來源</a>）</h2>
+		<img src="images/layout.gif" alt="layout" class="cover">
+	</section>
+	<section class="slide">
+		<h2>無語意標籤 div span</h2>
+		<ul>
+			<li>用來表達區塊，單純將元素群組起來</li>
+			<li>通常用來作為 CSS、JavaScript 操作的對象</li>
+			<li>div 為一個會自動換行的區塊 (block)</li>
+			<li>span 為一個<strong>不會</strong>自動換行的區塊 (inline)</li>
+			<li>block、inline 元素<a href="http://webremix.org/labs/lab2/utilities/tags-meaning.html" target="_blank">參考清單</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>div span 範例</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="PZOGbJ" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/PZOGbJ/'>Example 08</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>語意標籤的好與壞</h2>
+		<p>如只看文字上的意思，很容易造成濫用：<a href="http://html5doctor.com/avoiding-common-html5-mistakes/" target="_blank">常見錯誤（英）</a><br>
+	通則為，如果單純想要把元素框起來做美化，選用 div 或 span 會是比較和規格的</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="MKOjpx" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/MKOjpx/'>Example 09</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>表單 form</h2>
+		<ul>
+			<li>用來蒐集資料</li>
+			<li>input、label、select、textarea</li>
+			<li>通常我們會把這些標籤包裹在&lt;form&gt;裡面</li>
+			<li>今天只單純講裡面的東西長什麼樣子</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>表單元素的 input、label 標籤</h2>
+		<pre>
+			<code>&lt;label&gt;欄位名稱</code>
+			<code>	&lt;input type="輸入種類" name="名稱" placeholder="預設內容"&gt;</code>
+			<code>	&lt;input type="text" name="name" placeholder="輸入姓名"&gt;</code>
+			<code>&lt;/label&gt;</code>
+		</pre>
+		<label>姓名
+			<input type="text" name="name" placeholder="輸入姓名">
+		</label>
+	</section>
+	<section class="slide">
+		<h2>label 第二種使用方式</h2>
+		<pre>
+			<code>&lt;label for="辨識ID"&gt;欄位名稱</code>
+			<code>	&lt;input type="" name="" id="" placeholder=""&gt;</code>
+			<code>	&lt;input type="text" name="name" id="name1" value="輸入姓名"&gt;</code>
+			<code>&lt;/label&gt;</code>
+		</pre>
+		<h2>placeholder vs value</h2>
+		<label for="name1">姓名
+			<input type="text" name="name" id="name1" placeholder="輸入姓名">
+			<input type="text" name="name" id="name2" value="輸入姓名">
+		</label>
+	</section>
+	<section class="slide">
+		<h2>input type 有哪些</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="pgdbve" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/pgdbve/'>Example 06</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>下拉式選單 select</h2>
+		<pre>
+			<code>&lt;select name="選單名稱"&gt;</code>
+			<code>	&lt;option value="真正有用的值"&gt;給使用者看&lt;/option&gt;</code>
+			<code>	&lt;option value="真正有用的值"&gt;給使用者看&lt;/option&gt;</code>
+			<code>  &lt;option value="OO" <mark>selected</mark>&gt;我是新預設&lt;/option&gt;</code>
+			<code>&lt;/select&gt;</code>
+		</pre>
+		<select name="test">
+			<option value="1">選項一</option>
+			<option value="2" selected>選項二</option>
+			<option value="3">選項三</option>
+		</select>
+	</section>
+	<section class="slide">
+		<h2>表單範例</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="EPwJyY" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/EPwJyY/'>Example 6</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>多行文字輸入框 textarea</h2>
+		<pre>
+			<code>&lt;textarea&gt;這是一個多行文字的輸入框&lt;/textarea&gt;</code>
+			<code>&lt;textarea rows="高度" cols="寬度"&gt;多行文字的輸入框&lt;/textarea&gt;</code>
+			<code>&lt;textarea rows="10" cols="20"&gt;多行文字的輸入框&lt;/textarea&gt;</code>
+			<code>&lt;textarea <mark>style="resize:none"</mark>&gt;多行文字的輸入框&lt;/textarea&gt;</code>
+		</pre>
+		<textarea rows="10" cols="3">多行文字的輸入框</textarea>
+		<textarea rows="10" style="resize:none">不能拖了吧～</textarea>
+	</section>
+	<section class="slide">
+		<h2 class="shout">學form是為了可以設計它</h2>
+	</section>
+	<section class="slide">
+		<h2>實作二：表單練習</h2>
+		<p>這個不用上傳，目的只是要讓大家熟悉表單裡面的內容物</p>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24952/" target="_blank">Mozilla Thimble</a></p>
+	</section>
+	<section class="slide">
+		<h2>什麼是SEO？</h2>
+		<ul>
+			<li>搜尋引擎優化(Search Engine Optimization)</li>
+			<li>透過了解搜尋引擎的運作規則來調整網站</li>
+			<li>提高目的網站在有關搜尋引擎內排名的方式</li>
+			<li>但其實，沒有人真的知道怎麼做</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>搜尋引擎大分家</h2>
+		<ul>
+			<li>每一家搜尋引擎都有自己的規則</li>
+			<li>目前大部分還是以 Google 為主</li>
+			<li>每個人的 Google 搜尋結果其實都不一樣</li>
+			<li>簡單來說 https 就是比較安全的連線</li>
+			<li>所以為了鼓勵大家使用，Google 聲明使用 https 連線可以提升 SEO<br>
+			（資料來源：<a href="https://googlewebmastercentral.blogspot.tw/2014/08/https-as-ranking-signal.html" target="_blank">Google</a>）</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>巢狀標籤</h2>
+		<ul>
+			<li>HTML 的標籤可以互相嵌套</li>
+			<li>但不是什麼都可以套</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24958/" target="_blank">範例</a></li>
+			<li>技巧：檢查元素</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Permitted Contents</h2>
+		<ul>
+			<li>&lt;p&gt;, &lt;h1&gt;～&lt;h6&gt;標籤裡面只能包含 phrasing content</li>
+			<li>phrasing content 包含一般文字以及<a href="https://www.w3.org/TR/html-markup/common-models.html#common.elem.phrasing" target="_blank">這些 tag</a></li>
+			<li>&lt;ul&gt;, &lt;ol&gt; 只能包含 &lt;li&gt;</li>
+			<li>&lt;tr&gt; 裡面只能包 &lt;td&gt;, &lt;th&gt;</li>
+			<li>瀏覽器會容忍部分 HTML 錯誤</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>常見錯誤</h2>
+		<ul>
+			<li>&lt;div&gt;包含在&lt;p&gt;裡面</li>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories" target="_blank">怎麼知道行不行</a></li>
+		</ul>
+		<pre>
+			<code>&lt;p&gt;</code>
+			<code>	&lt;div&gt;HI!&lt;/div&gt;</code>
+			<code>&lt;/p&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">來點有趣的標籤吧：）</h2>
+	</section>
+	<section class="slide">
+		<h2>放放音樂 audio</h2>
+		<p>一般來說 mp3、mp4、wav 都可以放，會根據<a href="https://en.wikipedia.org/wiki/HTML5_Audio#Supported_audio_coding_formats" target="_blank">瀏覽器的不同</a>而支援不同的格式，長的也會不一樣</p>
+		<pre>
+		<code>&lt;audio src="http://www.w3schools.com/html/horse.mp3"</code>
+		<code> controls&gt;瀏覽器不支援 audio&lt;/audio&gt;</code>
+		</pre>
+		<audio src="http://www.w3schools.com/html/horse.mp3" controls>
+	瀏覽器不支援 audio</audio>
+	</section>
+	<section class="slide">
+		<h2>播播影片 video</h2>
+		<p>如果想要自動播放還可以加入 autoplay 的屬性，也可以設定 width 跟 height</p>
+		<pre>
+			<code>&lt;video src="http://www.w3schools.com/html/mov_bbb.mp4"</code>
+			<code> controls autoplay&gt;瀏覽器不支援 video&lt;/video&gt;</code>
+		</pre>
+		<video src="http://www.w3schools.com/html/mov_bbb.mp4" height="30%" controls>瀏覽器不支援 video</video>
+	</section>
+	<section class="slide">
+		<h2>支援手機瀏覽</h2>
+		<p>viewport 會告訴瀏覽器，目前使用的裝置多寬(或多高)，當作縮放時的基準</p>
+		<pre>
+		&lt;head&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+		&lt;/head&gt;
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>給快不行的 IE</h2>
+		<p>這一樣也是放在head裡面</p>
+		<pre>
+		<mark class="comment">&lt;!--[if lt IE 9]&gt;<br>
+  &lt;script src="//html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;<br>
+&lt;![endif]--&gt;</mark></pre>
+		<p><a href="https://github.com/afarkas/html5shiv" target="_blank">參考資料</a></p>
+	</section>
+	<section class="slide">
+		<h2>如何找資料</h2>
+		<ul>
+			<li>推薦網站：<a href="https://developer.mozilla.org/zh-TW/" target="_blank">MDN (Mozilla的)</a></li>
+			<li>通常中文網站比較容易有錯或是資訊過於老舊</li>
+			<li>其實 <a href="http://www.w3schools.com/" target="_blank">w3schools</a> 也滿多 <a href="http://meta.stackoverflow.com/questions/280478/why-not-w3schools-com" target="_blank">錯誤</a></li>
+			<li>善用 <a href="http://stackoverflow.com/" target="_blank">stackoverflow</a></li>
+		</ul>
+	</section>
+	<section class="slide" id="end">
+		<h2 class="shout shrink"><a href="../02/index.html">加油！</a></h2>
+		<style>
+		#end a {
+			font-size: 60px;
+		}
+		</style>
+	</section>
+	<!--<p class="badge">-->
+	<!--	<a href="https://github.com/shower/shower">Fork me on GitHub</a>-->
+	<!--</p>-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2016 Candy Tsai -->
+</body>
+</html>

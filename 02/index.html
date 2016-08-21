@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<title>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<style>
+		@font-face {
+		  font-family: 'cwTeXYen';
+		  font-style: normal;
+		  font-weight: 500;
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
+		  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
+		       url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
+		}
+	</style>
+</head>
+<body class="shower full">
+	<header class="caption">
+		<h1 style="text-align: center; color: #FFF;">HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h1>
+		<p style="color: #FFF; text-align: center;">蔡智晴</p>
+	</header>
+	<section class="slide" id="cover">
+		<h2>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h2>
+		<p class="sub">CSS</p>
+		<p class="me">講師：蔡智晴 / Candy Tsai</p>
+		<p class="me-sub">課程網站：<a href="http://homepage.ntu.edu.tw/~r04945041/" target="_blank">http://homepage.ntu.edu.tw/~r04945041/</a></p>
+		<style>
+			#cover h2 {
+				margin:30px 0;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				text-align: left;
+				font-size:20px;
+				}
+			#cover .sub {
+				margin: 10px 0;
+				text-align: center;
+			}
+			#cover .me {
+				margin-top: 50px;
+			}
+			#cover .me-sub {
+				margin: 0;
+			}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout">CSS 來了！</h2>
+	</section>
+	<section class="slide">
+		<h2>CSS是做什麼用的？</h2>
+		<ul>
+			<li>HTML：網頁內容的架構</li>
+			<li>CSS：網頁內容的呈現</li>
+			<li>Cascading Style Sheet (CSS)</li>
+			<li>副檔名為.css，例如：style.css</li>
+		</ul>
+	</section>
+	<section class="slide">
+	<h2>CSS長這個樣子！</h2>
+	<p data-height="268" data-theme-id="0" data-slug-hash="Rrjovd" data-default-tab="css" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/Rrjovd/'>Example 10</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>CSS的語法</h2>
+		<p>選擇器 { <br>屬性：值； <br>... 
+		<br>}</p>
+		<pre>
+		<code>body {</code>
+		<code>	background: yellow;</code>
+		<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>結合 CSS 技術到 HTML 中</h2>
+		<ol>
+			<li>直接在 tag 裡面加上 style 屬性</li>
+			<li>在&lt;head&gt;裡加入&lt;style&gt;</li>
+			<li>用&lt;link&gt;連結外部 stylesheet</li>
+		</ol>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/24989/" target="_blank">Mozilla Thimble 範例</a></p>
+	</section>
+	<section class="slide">
+		<h2>Cascading</h2>
+		<p>元素的最後外觀，來自於多個樣式定義</p>
+		<ol>
+			<li>瀏覽器預設樣式</li>
+			<li>瀏覽器使用者樣式</li>
+			<li>我們指定的樣式</li>
+		</ol>
+		<p>後者蓋過前者</p>
+	</section>
+	<section class="slide">
+		<h2>繼承</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="ZQaLqj" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/ZQaLqj/'>Example 11</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>CSS Normalization</h2>
+		<p>在 &lt;head&gt; 裡加入：</p>
+		<pre>
+			&lt;link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css"&gt;
+		</pre>
+		<p>作用：統一各瀏覽器的外觀定義（<a href="https://github.com/necolas/normalize.css" target="_blank">說明</a>）</p>
+	</section>
+	<section class="slide">
+		<h2>id、class 如何選取？</h2>
+		<ul>
+			<li>id 用 #</li>
+			<li>class 用 .</li>
+		</ul>
+		<pre>
+			<code>#id名稱 {color: red;}</code>
+			<code>.class名稱 {color: red;}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>進階選取</h2>
+		<pre>
+			<code>h2.blah {color: red;}</code>
+			有 blah class 之 h2
+			<code>h2, h3 {color: red;}</code>
+			h2和h3這兩個元素都設成字的顏色為紅色
+			<code>#blah p {color: red;}</code>
+			在 id 為 blah 之元素裡面的 p
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>範例</h2>
+		<p data-height="268" data-theme-id="0" data-slug-hash="LGOWQZ" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/LGOWQZ/'>Example14</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">來認識常見的樣式吧！</h2>
+	</section>
+	<section class="slide">
+		<h2>背景 background</h2>
+		<ul>
+			<li>background-color 背景顏色</li>
+			<li>background-image 背景圖案
+				<ul>
+					<li>background-repeat 是否要重複</li>
+					<li>background-position 設定背景位置</li>
+				</ul>
+			</li>
+		</ul>
+		<p data-height="200" data-theme-id="0" data-slug-hash="XXzMXQ" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/XXzMXQ/'>Example 12</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>路徑小提醒！</h2>
+		<p>url() 可以填絕對路徑（http 開頭、// 開頭）、相對路徑<br>
+相對路徑以 <strong>CSS 檔</strong>的位置起算<br>
+../ 是「上一層資料夾」。</p>
+	</section>
+	<section class="slide">
+		<h2>如何閱讀查到的資料</h2>
+		<p>看簡寫時<br>
+		該屬性有無順序：<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" target="_blank">有 (Summary 就會看到了)</a>、<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background" target="_blank">無</a></p>
+		<p>initial value：預設值</p>
+		<p>animatable：是否有動畫</p>
+	</section>
+	<section class="slide">
+		<h2>範例</h2>
+		<p>簡寫準則：如果沒有特定順序的屬性，當值有兩個以上時，就拉出來寫，這樣閱讀簡單也不容易錯</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="YwEZZp" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/YwEZZp/'>Example 13</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank">font</a> 字體相關</h2>
+		<ul>
+			<li>color 顏色</li>
+			<li>font-weight 字體粗細
+				<ul>
+					<li>lighter, normal, bold</li>
+					<li>100~900</li>
+					<li>但要看該字體有沒有支援</li>
+				</ul>
+			</li>
+			<li>font-size 字體大小</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>練習時間</h2>
+		<p>到 <a href="https://thimble.mozilla.org/" target="_blank">Thimble</a> 開新 Project</p>
+		<p>練習重點：</p>
+		<ol>
+			<li>選取 id、class（記得要用#或.）來做樣式</li>
+			<li>background 練習</li>
+			<li>font 練習</li>
+		</ol>
+	</section>
+	<section class="slide">
+	<h2>課堂練習二-續</h2>
+	<p>在課堂練習二：自我介紹中加入 css</p>
+	<p>請記得用新的表單上傳唷，這次開始會做記錄了～</p>
+	<p>繳交期限：1/19 晚上 11:59</p>
+	</section>
+	<section class="slide">
+		<h2>東西壞掉了怎麼辦？</h2>
+		<ul>
+			<li>開發人員工具</li>
+			<li>看 styles、computed styles</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25040/" target="_blank">範例</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">單位、數值</h2>
+	</section>
+	<section class="slide">
+		<h2>字型</h2>
+		<ul>
+			<li>px 絕對單位、是螢幕上所顯示的最小單位，</li>
+			<li>pt 絕對單位、是一個標準的長度單位</li>
+			<li>em 相對單位</li>
+			<li>% 是相對單位</li>
+			<li>瀏覽器預設尺寸: 16px = 1em = 100% = 12pt</li>
+		</ul>
+			<img src="images/fonts.gif" alt="字型大小" class="place right space">
+			<style>
+			.space {
+				margin-right: 10%;
+			}
+			</style>
+	</section>
+	<section class="slide">
+		<h2>顏色的設定</h2>
+		<p>Thimble 裡面有方便的小功能</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="JGOWgE" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/JGOWgE/'>Example 15</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2 class="shout">FAQ</h2>
+	</section>
+	<section class="slide">
+		<h2>路徑觀念釐清</h2>
+		<ul>
+			<li>Thimble 裡面的資料夾比較不明顯</li>
+			<li>怎麼開不叫 index.html 的網頁？</li>
+			<li>src 和 href 的值都是路徑</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25318/" target="_blank">練習</a></li>
+		</ul>
+		<img src="images/file.png" alt="Files" class="place right space" height="60%">
+	</section>
+	<section class="slide">
+		<h2>html/css檔案、連結外部css</h2>
+		<ul>
+			<li>html 副檔名.html</li>
+			<li>css 副檔名.css</li>
+			<li>開新檔案時要注意副檔名</li>
+			<li>如果有類似 style.css 的檔案，要再&lt;head&gt;裡面連過去</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>class, id 釐清</h2>
+		<ul>
+			<li>在 css 上，不確定要用什麼的時候就用 class</li>
+			<li>class 屬性裡面可有多個值</li>
+			<li>id 更常用來當作 JavaScript、jQuery 選取的對象</li>
+			<li>一個 tag 可以同時有 class 和 id</li>
+		</ul>
+		<pre>
+			<code>&lt;div class="自訂值" id="自訂值"&gt;</code>
+			<code>	.........</code>
+			<code>&lt;/div&gt;</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>課堂練習三：css selector練習</h2>
+		<p>這裡一定要搞清楚唷！</p>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25423/" target="_blank">課堂練習三：css selector 練習</a></p>
+		<p>請記得至課程網站繳交網址</p>
+	</section>
+	<section class="slide">
+		<h2>Descendant & Child Selector</h2>
+		<p data-height="350" data-theme-id="0" data-slug-hash="OMOdOd" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/OMOdOd/'>Example 21</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>Pseudo-Class</h2>
+		<ul>
+			<li>有特殊的狀態：當滑鼠移到上面來的時候</li>
+			<li>幾乎所有的元素都可以用:hover</li>
+			<li>最常見的&lt;a&gt;元素還有:link, :visited, :active，覆蓋順序為 LoVe HAte</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25430/" target="_blank">練習</a></li>
+			<p data-height="200" data-theme-id="0" data-slug-hash="zrPMNW" data-default-tab="css" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/zrPMNW/'>Example 17</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Pseudo-Class</h2>
+		<p>first-child: 第一個; last-child: 最後一個; nth-child(n): 第n個</p>
+		<p data-height="268" data-theme-id="0" data-slug-hash="OMOdzd" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/OMOdzd/'>Example 22</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2 class="shout">字型 Typography</h2>
+	</section>
+	<section class="slide">
+		<h2>字型 Typography</h2>
+			<p><span style="font-family: serif; font-size: 200%">Serif</span> 有襯線、明體<br>
+			<span style="font-family: sans-serif; font-size: 200%">Sans Serif</span> 無襯線；黑體<br>
+			<span style="font-family: monospace; font-size: 200%">monospace</span> 等寬、適合用來寫 code</p>
+	</section>
+	<section class="slide">
+		<h2>font-family</h2>
+		<pre>
+			<code>font-family: '文泉驛微米黑', '微軟正黑體', sans-serif;</code>
+		</pre>
+		<p>字體在使用者電腦裡沒有就使用下一個</p>
+		<p>最後一個通常放 Generic font family</p>
+	</section>
+	<section class="slide">
+		<h2>Generic font family</h2>
+		<ul>
+			<li>瀏覽器對各種 Generic font family 有預設字體</li>
+			<li>serif, sans-serif, cursive, fantacy, monospace</li>
+		</ul>
+		<p data-height="268" data-theme-id="0" data-slug-hash="vLWmOd" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/vLWmOd/'>Example 16</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>Web Font</h2>
+		<ul>
+			<li>Server 提供字體給瀏覽器來抓</li>
+			<li>只能顯示該字體</li>
+			<li>要將外部stylesheet嵌入時，連結請用"//"開頭</li>
+			<li><a href="http://www.google.com/webfonts" target="_blank">Google Web Font 英文字體</a></li>
+			<li><a href="https://www.google.com/fonts/earlyaccess" target="_blank">Google Web Font 中文字體</li>
+			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25045/" target="_blank">範例</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>行高與 font 簡寫</h2>
+		<ul>
+			<li>line-height 設定行高，沒一行與下一行字的距離</li>
+			<li>font 屬性簡寫：<br>
+			<code>font: size/line-height font-family;</code><br>
+			<code>font: 12px/20px Airal, sans-serif;</code></li>
+			<li>若 line-height 為純數字時，則為幾倍於字體大小之意</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>底線、刪除線、大寫小字</h2>
+		<p data-height="300" data-theme-id="0" data-slug-hash="vLWvJy" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/vLWvJy/'>Example 18</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2 class="shout">CSS 版面配置</h2>
+	</section>
+	<section class="slide">
+		<h2>display</h2>
+		<ul>
+			<li>每個 HTML 元素都有一個預設的 display 值</li>
+			<li>通常是 block 或 inline 其中一個</li>
+			<li> block：區塊元素；inline：行內元素</li>
+		</ul>
+		<img src="images/example-blockinline.png" alt="block-inline" class="place right" style="margin-right: 5%;">
+	</section>
+	<section class="slide">
+		<h2>display</h2>
+		<ul>
+			<li>&lt;p&gt;, &lt;h1&gt;~&lt;h6&gt;, &lt;div&gt; 預設 display: block;</li>
+			<li>&lt;em&gt;, &lt;strong&gt;, &lt;span&gt; 預設 display: inline;</li>
+			<li>display 還有 inline-block, none 的值</li>
+			<li>display: none 完全把該項目隱藏</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>inline vs inline-block</h2>
+		<ul>
+			<li>inline-block可以設 width 跟 height</li>
+			<li>inline 的 margin, padding 只能橫向發展</li>
+			<li>inline 的高要靠 line-height 設定</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Box Model</h2>
+		<ul>
+			<li>用來描述一個元素是如何組成的</li>
+			<li><a href="http://guyroutledge.github.io/box-model/" target="_blank">DEMO</a></li>
+		</ul>
+		<img src="images/box-model.gif" alt="box-model" class="place right" style="margin-right: 5%">
+	</section>
+	<section class="slide">
+		<h2>padding 和 margin 的寫法</h2>
+		<ul>
+			<li>每一邊都加 15px 的 padding<br>
+			<code>padding: 15px;</code></li>
+			<li>只有上面的 padding 設為 15px<br>
+			<code>padding-top: 15px;</code></li>
+			<li>padding 簡寫的順序為上右下左（順時針）<br>
+			<code>padding: 14px 15px 16px 17px;</code></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>padding 和 margin 的寫法</h2>
+		<ul>
+			<li>當有四個值的時候<br>
+			<code>padding: 上 右 下 左;</code></li>
+			<li>當有兩個值的時候<br>
+			<code>padding: 上下 左右;</code></li>
+			<li>當只有一個值的時候<br>
+			<code>padding: 全部;</code></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>邊框 border</h2>
+		<ul>
+			<li>有粗細、樣式和顏色可以選擇</li>
+			<li>樣式有：solid, dashed, dotted, double, ridge, groove</li>
+			<li>border-top, border-left, border-bottom, border-right</li>
+		</ul>
+		<p data-height="268" data-theme-id="0" data-slug-hash="mVqaQB" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/mVqaQB/'>Example 19</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>box-sizing: border-box vs content-box</h2>
+		<ul>
+			<li>剛剛的範例明明長寬都設100px了，但加了外框就不一樣大了！</li>
+			<li>瀏覽器預設值為content-box，來看<a href="http://guyroutledge.github.io/box-model/" target="_blank">DEMO</a></li>
+			<li>利用 box-sizing 屬性</li>
+			<p data-height="268" data-theme-id="0" data-slug-hash="RrjEOL" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/RrjEOL/'>Example 20</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout">定位 Positioning</h2>
+	</section>
+	<section class="slide">
+		<h2 style="margin-bottom: 0px;">Normal Flow</h2>
+		<p>文字由左邊往右邊，超過邊界就折到下一行</p>
+		<h2 style="margin-bottom: 0px;">float: left, float: right;</h2>
+		<p>原地向左/右跑到底，被包圍</p>
+		<p data-height="240" data-theme-id="0" data-slug-hash="LGOqde" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/LGOqde/'>Example 23</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>position 屬性</h2>
+		<p>position: static | relative | absolute | fixed</p>
+		<ul>
+			<li>static: 預設的定位模式 (由上到下、由左到右)</li>
+			<li>relative: 相對於預設的位置做位移</li>
+			<li>absolute: 絕對定位，直接指定標籤區快出現的座標位置</li>
+			<li>fixed: 相對於瀏覽器視窗來定位，即便頁面捲動還是會固定在相同的位置</li>
+			<li>z-index: 疊疊樂，數字大的在上面</li>
+			<li><a href="http://codepen.io/stringpiggy/pen/YwEBdO" target="_blank">DEMO</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>練習CSS</h2>
+		<p>可以拿之前自我介紹的Project來練習今天所學的功能！</p>
+	</section>
+	<section class="slide">
+		<h2>CSS Specificity</h2>
+		<ul>
+			<li>Value 不同的兩個定義，被套用在同一個元素上到底是誰會被採用？</li>
+		</ul>
+		<img src="images/specificity01.png" alt="specificity">
+	</section>
+	<section class="slide">
+		<h2>CSS Specificity</h2>
+		<img src="images/cal1.png" alt="specificity">
+	</section>
+	<section class="slide">
+		<h2>CSS Specificity</h2>
+		<img src="images/cal3.png" alt="specificity">
+	</section>
+	<section class="slide">
+		<h2>CSS Specificity</h2>
+		<p data-height="250" data-theme-id="0" data-slug-hash="mVqvYo" data-default-tab="css" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/mVqvYo/'>Specificity</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>Media queries</h2>
+		<ul>
+			<li>給不同 device 不同的 CSS</li>
+			<li>max-width: Npx 就是如果使用者之視窗寬度 &le; Npx，將會再載入這裡的 CSS</li>
+			<li>min-width: Npx 就是如果使用者之視窗寬度 &ge; Npx，將會再載入這裡的 CSS。</li>
+			<li><a href="http://codepen.io/stringpiggy/pen/PZOLPY" target="_blank">DEMO</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Animate.css</h2>
+		<p><a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>可以讓你輕鬆無痛做動畫</p>
+	</section>
+	<section class="slide">
+		<h2>CSS Animation 簡單介紹</h2>
+		<p>今天就練習簡單的 CSS 動畫</p>
+			<p data-height="268" data-theme-id="0" data-slug-hash="KVZNRK" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/KVZNRK/'>CSS Animation</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+		<p>參考資料：<a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank">CSS Tricks</a></p>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">到底可以做到什麼樣的程度呢？</h2>
+	</section>
+	<section class="slide">
+		<h2>CSS動畫觀摩</h2>
+		<ol>
+			<li><a href="http://codepen.io/rickzanutta/pen/bBHAz" target="_blank">選單</a></li>
+			<li><a href="http://codepen.io/teles/pen/gbKeLR" target="_blank">停車</a></li>
+			<li><a href="http://codepen.io/TaniaLD/pen/oKxep" target="_blank">讀取動畫</a></li>
+			<li><a href="http://codepen.io/Alireza29675/pen/KwgwMy" target="_blank">聖誕老公公</a></li>
+			<li><a href="http://codepen.io/aakashrodrigues/pen/Gfhjw" target="_blank">人物動畫</a></li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>到目前為止...</h2>
+		<p>基礎都學了差不多，剩下就是到處觀摩及不停地練習</p>
+		<img src="images/slides.gif" alt="coding" height="65%">
+	</section>
+	<section class="slide">
+		<h2>課堂練習四：排版實務練習</h2>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25779/" target="_blank">練習</a></p>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25761/" target="_blank">DEMO1</a></p>
+		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25737/" target="_blank">DEMO2</a></p>
+		<p>大家練習完記得把成果網址繳交唷！</p>
+	</section>
+	<section class="slide">
+		<h2 class="shout">rel 還可以輸入什麼值</h2>
+	</section>
+	<section class="slide">
+		<h2>還記得怎麼連外部的 stylesheet 嗎？</h2>
+		<pre>
+			<code>&lt;link rel="stylesheet" href="路徑"&gt;</code>
+		</pre>
+		<p>其中 rel 屬性中第二熱門的值就是 icon，那 icon 可以做什麼用呢？</p>
+		<img src="images/favicon.png" alt="favicon">
+	</section>
+	<section class="slide">
+		<h2>Favicon</h2>
+		<pre>
+			<code>&lt;link rel="icon" href="路徑"&gt;</code>
+		</pre>
+		<p>favicon 怎麼做？<br>
+		<a href="http://www.freefavicon.com/" target="_blank">產生器</a><br>
+		<a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25769/" target="_blank">DEMO</a></p>
+	</section>
+	<section class="slide">
+		<h2><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a></h2>
+		<p>和使用者介面 UI 相關<br>
+		<a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25783/" target="_blank">練習</a></p>
+		<ul>
+			<li>圖示放大、縮小不失真</li>
+			<li>使用簡單</li>
+		</ul>
+		<img src="images/fa.png" alt="fa">
+	</section>
+	<section class="slide">
+		<h2>Font end tools and playground</h2>
+		<p>會選用 Mozilla Thimble 的原因是因為介面簡單、也有檔案階層的概念</p>
+		<ul>
+			<li>找 library（不用花費自己的頻寬）
+				<ul>
+					<li><a href="https://cdnjs.com/" target="_blank">cdnjs</a></li>
+					<li><a href="https://developers.google.com/speed/libraries/" target="_blank">Google</a></li>
+				</ul>
+			</li>
+			<li>Playground（Codepen 和 Thimble 外）
+				<ul>
+					<li><a href="https://jsbin.com/" target="_blank">JSbin</a></li>
+					<li><a href="http://dabblet.com/" target="_blank">dabblet</a></li>
+					<li><a href="http://liveweave.com/index-alert.html" target="_blank">Liveweave</a></li>
+				</ul>
+			</li>
+		</ul>
+	</section>
+	<section class="slide" id="end">
+		<h2 class="shout shrink"><a href="../03/index.html">繼續往下囉～</a></h2>
+		<style>
+		#end a {
+			font-size: 60px;
+		}
+		</style>
+	</section>
+	<!--<p class="badge">-->
+	<!--	<a href="https://github.com/shower/shower">Fork me on GitHub</a>-->
+	<!--</p>-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2016 Candy Tsai -->
+</body>
+</html>

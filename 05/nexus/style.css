@@ -1,0 +1,62 @@
+body {
+  padding-top: 50px;
+  font-family: "Open Sans", sans-serif;
+}
+section {
+  padding: 5% 0;
+}
+.info h1 {
+  font-size: 100px;
+  color: #26c6da;
+}
+.product .left h2 {
+  font-size: 50px;
+}
+.product .left {
+  margin-top: 30%;
+  color: #26c6da;
+}
+.product .right {
+  margin-top: 0px;
+}
+.product .right h2 {
+  font-size: 18px;
+}
+.product-two h2 {
+  font-size: 20px;
+}
+.product-two .left{
+  margin-top: 0px;
+}
+
+@media (min-width: 768px) {
+
+  .navbar-brand,
+  .navbar-nav li a {
+    line-height: 80px;
+    height: 80px;
+    padding-top: 0;
+  }
+
+  .mar {
+    margin-top: 20px;
+  }
+
+  .info h2 {
+    font-size: 30px;
+  }
+  .product h2{
+    font-size: 40px;
+  }
+  .product .left {
+    margin-top: 5%;
+  }
+
+  .product .right {
+    margin-top: 15%
+  }
+
+  .product-two .left {
+    margin-top: 5%
+  }
+}
