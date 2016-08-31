@@ -48,6 +48,38 @@ $('#lookup-form').submit(function(e) {
           <td>課堂練習一</td>\
           <td>' + score.hw1 + '</td>\
         </tr>\
+        <tr>\
+          <td>課堂練習二：自我介紹</td>\
+          <td>' + score.hw2 + '</td>\
+        </tr>\
+        <tr>\
+          <td>課堂練習三：CSS Selectors</td>\
+          <td>' + score.hw3 + '</td>\
+        </tr>\
+        <tr>\
+          <td>課堂練習四：Bootstrap</td>\
+          <td>' + score.hw4 + '</td>\
+        </tr>\
+        <tr>\
+          <td>課堂練習五：JavaScript</td>\
+          <td>' + score.hw5 + '</td>\
+        </tr>\
+        <tr class="info">\
+          <td>課堂測驗一：HTML</td>\
+          <td>' + score.test1 + '</td>\
+        </tr>\
+        <tr class="info">\
+          <td>課堂測驗二：CSS</td>\
+          <td>' + score.test2 + '</td>\
+        </tr>\
+        <tr class="info">\
+          <td>課堂測驗三：Bootstrap</td>\
+          <td>' + score.test3 + '</td>\
+        </tr>\
+        <tr class="success">\
+          <td>實作一：Google Nexus 6P</td>\
+          <td>' + score.p1 + '</td>\
+        </tr>\
       </tbody></table></div></div></div>');
 
 //       $('#result').html('<div class="row">\

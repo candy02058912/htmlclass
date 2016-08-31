@@ -28,7 +28,7 @@
 		<h2>HTML5, CSS3, jQuery, Bootstrap 網頁設計基礎班</h2>
 		<p class="sub">Bootstrap</p>
 		<p class="me">講師：蔡智晴 / Candy Tsai</p>
-		<p class="me-sub">課程網站：<a href="http://homepage.ntu.edu.tw/~r04945041/" target="_blank">http://homepage.ntu.edu.tw/~r04945041/</a></p>
+		<p class="me-sub">課程網站：<a href="https://www.csie.ntu.edu.tw/~r04945041/273/" target="_blank">https://www.csie.ntu.edu.tw/~r04945041/273/</a></p>
 		<style>
 			#cover h2 {
 				margin:30px 0;
@@ -55,7 +55,9 @@
 		<h2 class="shout grow">Bootstrap</h2>
 	</section>
 	<section class="slide">
-		<h2>Bootstrap 3</h2>
+		<h2><a href="//getbootstrap.com/" target="_blank">Bootstrap 3</a>
+		<a href="http://kkbruce.tw/bs3/" target="_blank">中文文件</a>
+		</h2>
 		<iframe src="//getbootstrap.com/" height="80%" width="100%"></iframe>
 	</section>
 	<section class="slide">
@@ -65,6 +67,18 @@
 			<li>一堆寫好的 CSS</li>
 			<li>只要套到 class 裡就好</li>
 			<li>由 Twitter 開發</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow"><a href="http://trends.builtwith.com/docinfo/Twitter-Bootstrap" target="_blank">有多少網站再使用？</a></h2>
+	</section>
+	<section class="slide">
+		<h2>來看一些例子</h2>
+		<ul>
+			<li><a href="https://tw.voicetube.com/" target="_blank">VoiceTube 網站 / HERO 課程</a></li>
+			<li><a href="https://www.yoctol.com/" target="_blank">Yoctol Info</a></li>
+			<li><a href="https://www.gliacloud.com/zh-hant/" target="_blank">Gliacloud</a></li>
+			<li><a href="https://twitter.com" target="_blank">Twitter 元件們</a></li>
 		</ul>
 	</section>
 	<section class="slide">
@@ -106,7 +120,7 @@
 			<li>body 預設 background-color: #FFF</li>
 			<li>超連結只有:hover時出現底線</li>
 		</ul>
-		<p>基本上如果東西長的根預設不一樣就是 Bootstrap 的預設</p>
+		<p>基本上如果東西長的和原本樣子不一樣就是 Bootstrap 的預設</p>
 	</section>
 	<section class="slide">
 		<h2>格線系統 Grid System</h2>
@@ -124,9 +138,9 @@
 	<section class="slide">
 		<h2>使用 row 注意事項</h2>
 		<ul>
-			<li>col 用完12格就要再開新的 row（有條件）</li>
+			<li>不要偷懶不開 row</li>
 			<li>row: 橫向 col: 直向</li>
-			<li>row 裡面可以在包含 row</li>
+			<li>row 裡面可以放 row</li>
 		</ul>
 		<p data-height="268" data-theme-id="0" data-slug-hash="jWYBOa" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/jWYBOa/'>containers two</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
@@ -142,7 +156,7 @@
 		<div><img src="images/offset.png" alt="offset" class="place bottom" width="100%"></div>
 	</section>
 	<section class="slide">
-		<h2>row 裡面可以包含 row</h2>
+		<h2>row 裡面可以放 row</h2>
 		<img src="images/nestcode.png" class="place" width="100%">
 		<img src="images/nesting.png" alt="nesting" class="place bottom" width="100%" style="margin-bottom: 2%">
 	</section>
@@ -152,54 +166,52 @@
 	<section class="slide">
 		<h2>如何開始使用 Bootstrap</h2>
 		<p>stylesheet 位置：<br>
-		https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css</p>
+		https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css</p>
 		<p>請大家自己連唷！</p>
 	</section>
 	<section class="slide">
-		<h2>課堂練習五：使用 Bootstrap 排版</h2>
-		<img src="images/phone-grid.png" alt="practice" class="place bottom" width="100%" style="margin-bottom: 5%">
-		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25856/" target="_blank">練習五</a><br>
-		做完記得要上傳網址唷：）<br>
-		要做成下面這樣的排版，會用到剛剛所講的技巧<br>
-		動作比要快的同學，可以拿之前的自我介紹來練習排版，或是另闢一個新的網頁</p>
+		<h2>實作：排版</h2>
+		<ul>
+			<li>把上次 CSS 的實作排版用 Bootstrap 完成</li>
+			<li><a href="https://thimbleprojects.org/candyandpooh/93644" target="_blank">上次的東西</a></li>
+			<li>如果已經做完的同學，可以完成<a href="images/extra-practice.png">這個</a></li>
+		</ul>
 	</section>
-	<section class="slide">
-		<h2>工具補充</h2>
-			<ul>
-				<li>Presentation Framework
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/" target="_blank">reveal.js</a> 目前算是最夯的</li>
-						<li><a href="https://github.com/impress/impress.js" target="_blank">impress.js</a> 特效更多元</li>
-						<li><a href="https://github.com/shower/shower" target="_blank">Shower</a> 課程投影片是使用這套</li>
-					</ul>					
-				</li>
-				<li>Google Chrome Extension
-					<ul>
-						<li><a href="https://chrome.google.com/webstore/detail/livepage/pilnojpmdoofaelbinaeodfpjheijkbh" target="_blank">LivePage</a>：
-						即時更新瀏覽器，在本機端操作時也可以用
-						</li>
-					</ul>
-				</li>
-			</ul>
-	</section>
-	<section class="slide">
+	<!-- <section class="slide">
 		<h2>今天上課重點</h2>
 		<ol>
 			<li>昨天的<a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/26187/" target="_blank">加分題</a></li>
 			<li>簡介 Bootstrap 樣式（全部請參照<a href="http://kkbruce.tw/bs3/" target="_blank">中文版教學</a>或<a href="http://getbootstrap.com/" target="_blank">官網</a>）</li>
 			<li>複習 Grid 的用法，一步一步從 Bootstrap 帶進來到完成</li>
 			<li>已經完成的同學：請設定不同裝置之瀏覽模式差異（兩種就好）<a href="images/advance.png" target="_blank">參考圖</a></li>
-			<li>課堂練習六：製作簡易產品網站
+			<li>Project 1：製作簡易產品網站
 				<ul>
 					<li>參考 <a href="https://www.google.com/intl/zh-TW_tw/nexus/6p/" target="_blank">Google Nexus 6P</a></li>
 					<li>範例（<a href="images/large.png" target="_blank">大螢幕</a>）（<a href="images/small.png" target="_blank">小螢幕</a>）</li>
 				</ul>
 			</li>
 		</ol>
-	</section>
+	</section> -->
 	<section class="slide">
 		<h2>置左、置中、置右</h2>
 		<h2>有 .text-left, .text-center, .text-right 可用</h2>
+	</section>
+	<section class="slide">
+		<h2>自我介紹</h2>
+		<iframe src="https://docs.google.com/spreadsheets/d/18NXyUE_Yf2aGLzVW0e6Dxch983uWh0iD4EGfxrk2FPs/pubhtml?widget=true&amp;headers=false" width="90%" height="400px"></iframe>
+	</section>
+	<section class="slide">
+		<h2>課堂練習四：使用 Bootstrap 排版</h2>
+		<!-- <img src="images/phone-grid.png" alt="practice" class="place bottom" width="100%" style="margin-bottom: 5%"> -->
+		<!-- <p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25856/" target="_blank">練習四</a><br> -->
+		<p>
+		做完記得要上傳網址唷：）<br>
+		示意圖：<a href="images/price-xs.png" target="_blank">xs</a>
+		<a href="images/price-sm.png" target="_blank">sm</a>
+		<a href="images/price-md.png" target="_blank">md 以上</a><br>
+		<a href="https://tw.voicetube.com/hero" target="_blank">參考網址</a><br>
+		動作比要快的同學，可以拿之前的自我介紹來練習排版，或是另闢一個新的網頁。<br>
+		如果有同學這個部分做不完，就請交剛剛的排版實作的網址或是屍體，總之要交東西才能有分數。</p>
 	</section>
 	<section class="slide">
 		<h2>選單 Navs</h2>
@@ -214,7 +226,7 @@
 			<li>選單是用 ul 清單來列出一個一個連結，Bootstrap 會把前面的點點拿掉</li>
 			<li>清單裡面必須為超連結才有用</li>
 			<li>在 li 加上 class="active" 可以標記該項目</li>
-			<li>在 li 加上 class="disabled" 就會不能按下去</li>
+			<li>在 li 加上 class="disabled" 就會出現禁止的符號</li>
 			<li>active / disabled 只要 class 裡面有 nav 就可以用</li>
 		</ul>
 	</section>
@@ -279,15 +291,15 @@
 			<p data-height="268" data-theme-id="0" data-slug-hash="vLpPVq" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/vLpPVq/'>Jumbotron</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 	</section>
-	<section class="slide">
+	<!-- <section class="slide">
 		<h2>1/22 進度</h2>
 		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/26767/" target="_blank">快快點我吧！</a></p>
 		<h2>作業、考試、出缺席記錄</h2>
 		<p>現在只要在課程網站上打入姓名就可以查詢了！</p>
 		<p>如果有任何的問題請一定要跟我說唷～</p>
-	</section>
+	</section> -->
 	<section class="slide">
-		<h2>課堂練習六：製作產品介紹頁面</h2>
+		<h2>Project 1：製作產品介紹頁面</h2>
 		<h2>參考網頁：<a href="https://www.google.com/intl/zh-TW_tw/nexus/6p/" target="_blank">Google Nexus 6P</a></li></h2>
 		<h2>Step 1：在 Thimble 開新專案</h2>
 		<h2>Step 2：帶入 Bootstrap Library</h2>
@@ -301,18 +313,42 @@
 		<h2>Step 8：大小畫面很奇怪？可以在CSS使用 @media</h2>
 	</section>
 	<section class="slide">
-		<h2>Step 9：做得差不多的同學可以開始自行發揮，並且繳交到課堂練習六！</h2>
-		<h2>注意：style.css 的位置要比 bootstrap 的來得下面，這樣如果想要覆蓋東西才會成功唷！</h2>
+		<h2>Step 9：做得差不多的同學可以開始自行發揮，並且繳交到實作一：Landing Page！</h2>
+		<h2>注意：style.css 放的位置要比 Bootstrap 的來得下面，這樣如果想要覆蓋東西才會成功唷！</h2>
 		<h2>小螢幕的選單不會動是正常的（需要JavaScript的幫忙）</h2>
 	</section>
 	<section class="slide">
 		<h2>除了 Bootstrap 以外，還有什麼其他的 Frontend Framework呢？</h2>
 		<ul>
-			<li><a href="http://foundation.zurb.com/" target="_blank">Foundation by ZURB</a> (第二多人使用)</li>
+			<li><a href="http://foundation.zurb.com/" target="_blank">Foundation by ZURB</a> (號稱第二多人使用)</li>
 			<li><a href="http://semantic-ui.com/" target="_blank">Semantic UI</a></li>
 			<li><a href="http://purecss.io/" target="_blank">Pure by Yahoo!</a></li>
 			<li><a href="http://getuikit.com/" target="_blank">UIkit by YOOtheme</a></li>
 			<li><a href="http://www.kule.tw/" target="_blank">KuleLazy 3</a> (Made in Taiwan)</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">我們要上傳網頁囉！！</h2>
+	</section>
+	<section class="slide">
+		<h2>使用 Github Pages</h2>
+		<p>就算不會 / 不知道 git 是什麼還是可以用唷！</p>
+		<iframe width="420" height="315" src="https://www.youtube.com/embed/sS1hpMIBI_I" frameborder="0" allowfullscreen></iframe>
+	</section>
+	<section class="slide">
+		<h2><a href="https://git-scm.com/" target="_blank">Git 是什麼</a></h2>
+		<ul>
+			<li>版本控制</li>
+			<li>多人協做</li>
+			<li><a href="https://ihower.tw/blog/archives/5140" target="_blank">Git flow</a> / <a href="https://guides.github.com/introduction/flow/" target="_blank">Github flow</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>期中調查</h2>
+		<ul>
+			<li>關心大家目前的狀況</li>
+			<li>無記名，請大家放心填寫</li>
+			<li><a href="https://goo.gl/forms/z3BDDIDPbpk76C662" target="_blank">https://goo.gl/forms/z3BDDIDPbpk76C662</a></li>
 		</ul>
 	</section>
 	<section class="slide" id="end">

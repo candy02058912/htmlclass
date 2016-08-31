@@ -116,13 +116,20 @@
 		<h2>CSS Normalization</h2>
 		<p>在 &lt;head&gt; 裡加入：</p>
 		<pre>
-			&lt;link rel="stylesheet" href="https://raw.github.com/necolas/normalize.css/master/normalize.css"&gt;
+			&lt;link rel="stylesheet" href="//necolas.github.io/normalize.css/4.1.1/normalize.css"&gt;
 		</pre>
 		<p>作用：統一各瀏覽器的外觀定義（<a href="https://github.com/necolas/normalize.css" target="_blank">說明</a>）</p>
 	</section>
 	<section class="slide">
 		<h2>CSS Reset VS CSS Normalize</h2>
 		<p>用 Google 搜尋看看吧！</p>
+	</section>
+	<section class="slide">
+		<h2>寫 CSS 一定要認識的網站</h2>
+		<ul>
+			<li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+			<li><a href="http://caniuse.com/" target="_blank">CanIUse</a></li>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>繼承</h2>
@@ -204,6 +211,15 @@
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 	</section>
 	<section class="slide">
+		<h2>使用縮寫要小心預設值？</h2>
+		<ul>
+			<li>發現顯示不如預期</li>
+			<li>開發人員工具</li>
+			<li>看 styles、computed styles</li>
+			<li><a href="https://thimbleprojects.org/candyandpooh/93416" target="_blank">範例</a></li>
+		</ul>
+	</section>
+	<section class="slide">
 		<h2><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" target="_blank">font</a> 字體相關</h2>
 		<ul>
 			<li>color 顏色</li>
@@ -230,22 +246,14 @@
 	<section class="slide">
 		<h2>課堂練習二-續</h2>
 		<p>在課堂練習二：自我介紹中加入 css</p>
-		<p>繳交期限：8/23 晚上 10:00</p>
+		<p>繳交期限：8/25 晚上 10:00</p>
 		<p>會公布給大家看唷：）</p>
-	</section>
-	<section class="slide">
-		<h2>東西壞掉了怎麼辦？</h2>
-		<ul>
-			<li>開發人員工具</li>
-			<li>看 styles、computed styles</li>
-			<li><a href="https://thimbleprojects.org/candyandpooh/93416" target="_blank">範例</a></li>
-		</ul>
 	</section>
 	<section class="slide">
 		<h2 class="shout">單位、數值</h2>
 	</section>
 	<section class="slide">
-		<h2>字型</h2>
+		<h2>px, pt, em, %</h2>
 		<ul>
 			<li>px 絕對單位、是螢幕上所顯示的最小單位，</li>
 			<li>pt 絕對單位、是一個標準的長度單位</li>
@@ -259,6 +267,16 @@
 				margin-right: 10%;
 			}
 			</style>
+	</section>
+	<section class="slide">
+		<h2>Viewport Sized</h2>
+		<ul>
+			<li>vw (viewport width)</li>
+			<li>1vw = 1% 螢幕寬度
+			<li>vh (viewport height)</li>
+			<li>1vh = 1% 螢幕高度
+		</ul>
+		<p><a href="https://css-tricks.com/viewport-sized-typography/" target="_blank">CSS Tricks</a></p>
 	</section>
 	<section class="slide">
 		<h2>顏色的設定</h2>
@@ -351,7 +369,7 @@
 			<li>要將外部stylesheet嵌入時，連結請用"//"開頭</li>
 			<li><a href="http://www.google.com/webfonts" target="_blank">Google Web Font 英文字體</a></li>
 			<li><a href="https://www.google.com/fonts/earlyaccess" target="_blank">Google Web Font 中文字體</li>
-			<li><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25045/" target="_blank">範例</a></li>
+			<li><a href="https://thimbleprojects.org/candyandpooh/93478" target="_blank">範例</a></li>
 		</ul>
 	</section>
 	<section class="slide">
@@ -360,7 +378,7 @@
 			<li>line-height 設定行高，沒一行與下一行字的距離</li>
 			<li>font 屬性簡寫：<br>
 			<code>font: size/line-height font-family;</code><br>
-			<code>font: 12px/20px Airal, sans-serif;</code></li>
+			<code>font: 12px/20px Arial, sans-serif;</code></li>
 			<li>若 line-height 為純數字時，則為幾倍於字體大小之意</li>
 		</ul>
 	</section>
@@ -429,6 +447,12 @@
 		</ul>
 	</section>
 	<section class="slide">
+		<h2 class="shout">那給三個值的時候呢？</h2>
+	</section>
+	<section class="slide">
+		<h2 class="shout">什麼時候用哪個？</h2>
+	</section>
+	<section class="slide">
 		<h2>邊框 border</h2>
 		<ul>
 			<li>有粗細、樣式和顏色可以選擇</li>
@@ -458,6 +482,13 @@
 		<p>原地向左/右跑到底，被包圍</p>
 		<p data-height="240" data-theme-id="0" data-slug-hash="LGOqde" data-default-tab="result" data-user="stringpiggy" class='codepen'>See the Pen <a href='http://codepen.io/stringpiggy/pen/LGOqde/'>Example 23</a> by Candy (<a href='http://codepen.io/stringpiggy'>@stringpiggy</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+	</section>
+	<section class="slide">
+		<h2>使用 calc</h2>
+		<ul>
+			<li>CSS 內建功能</li>
+			<li>方便大家做計算</li>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>position 屬性</h2>
@@ -501,12 +532,15 @@
 			<li>給不同 device 不同的 CSS</li>
 			<li>max-width: Npx 就是如果使用者之視窗寬度 &le; Npx，將會再載入這裡的 CSS</li>
 			<li>min-width: Npx 就是如果使用者之視窗寬度 &ge; Npx，將會再載入這裡的 CSS。</li>
-			<li><a href="http://codepen.io/stringpiggy/pen/PZOLPY" target="_blank">DEMO</a></li>
+			<li><a href="http://codepen.io/stringpiggy/pen/PZOLPY" target="_blank">Codepen DEMO</a> <a href="https://thimbleprojects.org/candyandpooh/93734" target="_blank">Thimble Demo</a></li>
 		</ul>
 	</section>
 	<section class="slide">
 		<h2>Animate.css</h2>
-		<p><a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>可以讓你輕鬆無痛做動畫</p>
+		<ul>
+			<li><a href="https://github.com/daneden/animate.css" target="_blank">Animate.css</a>可以讓你輕鬆無痛做動畫</li>
+			<li><a href="https://thimbleprojects.org/candyandpooh/93737" target="_blank">Demo</a></li>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>CSS Animation 簡單介紹</h2>
@@ -522,7 +556,7 @@
 		<h2>CSS動畫觀摩</h2>
 		<ol>
 			<li><a href="http://codepen.io/rickzanutta/pen/bBHAz" target="_blank">選單</a></li>
-			<li><a href="http://codepen.io/teles/pen/gbKeLR" target="_blank">停車</a></li>
+			<li><a href="http://codepen.io/davidkpiano/pen/NAZarB" target="_blank">Eevee</a></li>
 			<li><a href="http://codepen.io/TaniaLD/pen/oKxep" target="_blank">讀取動畫</a></li>
 			<li><a href="http://codepen.io/Alireza29675/pen/KwgwMy" target="_blank">聖誕老公公</a></li>
 			<li><a href="http://codepen.io/aakashrodrigues/pen/Gfhjw" target="_blank">人物動畫</a></li>
@@ -534,11 +568,19 @@
 		<img src="images/slides.gif" alt="coding" height="65%">
 	</section>
 	<section class="slide">
-		<h2>課堂練習四：排版實務練習</h2>
+		<h2>HTML 簡報</h2>
+		<ul>
+			<li><a href="https://github.com/shower/shower" target="_blank">Shower</a></li>
+			<li><a href="https://github.com/hakimel/reveal.js/" target="_blank">Reveal.js</a></li>
+			<li><a href="https://github.com/marcolago/flowtime.js" target="_blank">Flowtime.js</a></li>
+			<li><a href="https://github.com/imakewebthings/deck.js" target="_blank">Deck.js</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>實作：排版實務練習</h2>
 		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25779/" target="_blank">練習</a></p>
-		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25761/" target="_blank">DEMO1</a></p>
-		<p><a href="https://d157rqmxrxj6ey.cloudfront.net/candy02058912/25737/" target="_blank">DEMO2</a></p>
-		<p>大家練習完記得把成果網址繳交唷！</p>
+		<p><a href="https://thimbleprojects.org/candyandpooh/93644" target="_blank">DEMO</a></p>
+		<p>不用交給我唷：）</p>
 	</section>
 	<section class="slide">
 		<h2 class="shout">rel 還可以輸入什麼值</h2>
@@ -584,10 +626,33 @@
 				<ul>
 					<li><a href="https://jsbin.com/" target="_blank">JSbin</a></li>
 					<li><a href="http://dabblet.com/" target="_blank">dabblet</a></li>
-					<li><a href="http://liveweave.com/index-alert.html" target="_blank">Liveweave</a></li>
 				</ul>
 			</li>
 		</ul>
+	</section>
+	<section class="slide">
+		<h2 class="shout grow">如果以上都會的話...</h2>
+	</section>
+	<section class="slide">
+		<h2>Flexbox</h2>
+		<ul>
+			<li><a href="http://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></li>
+			<li><a href="http://flexbox.io/view/Vj7NZ6FiQvo" target="_blank">What the Flexbox?</a></li>
+			<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+	<h2>學習資源</h2>
+	<ul>
+		<li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+		<li><a href="https://www.codeschool.com/" target="_blank">Code School</a></li>
+		<li><a href="https://www.pluralsight.com/" target="_blank">PluralSight</a></li>
+		<li><a href="https://egghead.io/" target="_blank">Egghead</a></li>
+		<li><a href="https://www.coursera.org/" target="_blank">Coursera</a></li>
+		<li><a href="https://www.udacity.com/" target="_blank">Udacity</a></li>
+		<li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+		<li><a href="https://cs50.harvard.edu/">CS50</a></li>
+	</ul>
 	</section>
 	<section class="slide" id="end">
 		<h2 class="shout shrink"><a href="../03/index.html">繼續往下囉～</a></h2>
